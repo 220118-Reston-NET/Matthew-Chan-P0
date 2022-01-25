@@ -37,12 +37,41 @@ public class Customer{
             return _address;
         }
         set {
-            if(string.IsNullOrEmpty(value))
+            if(string.IsNullOrEmpty(value)){
+                throw new Exception("Error, Empty Value is not permissable");
+            }
+            _address = value;
         }
+    }
+    public string Email { 
+        get {
+            return _email;
         }
-    public string Email { get; set; }
-    public string PhoneNumber { get; set; }
+        set {
+            if(string.IsNullOrEmpty(value)){
+                throw new Exception("Error, Empty Value is not permissable");
+            }
+            _email = value;
+        } 
+    }
+    public string PhoneNumber { 
+        get{
+            return _PhoneNumber;
+        } 
+        set{
+            if(string.IsNullOrEmpty(value)){
+                throw new Exception("Error, Empty Value is not permissable");
+            }
+            _PhoneNumber = value;
+        } 
+    }
 
-
+    public Customer(){
+        Name = "John Smith";
+        Age = 33;
+        Address = "Utopia";
+        Email = "John.Smith@gmail.com";
+        PhoneNumber = 123-456-7890;
+    }
     
 }

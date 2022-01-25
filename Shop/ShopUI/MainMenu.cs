@@ -11,7 +11,7 @@ namespace ShopUI
             Console.WriteLine("[2] Find a Customer");
             Console.WriteLine("[3] Search Inventory");
             Console.WriteLine("[4] View Inventory");
-            COnsole.WriteLine("[5] Place Order");
+            Console.WriteLine("[5] Place Order");
             Console.WriteLine("[6] Replenish Inventory");
             Console.WriteLine("[0] Exit");
         }
@@ -26,7 +26,7 @@ namespace ShopUI
                 case "0":
                     return "Exit";
                 case "1":
-                    return "???????????";
+                    return "Exit";
                 default:
                     Console.WriteLine("Please input a valid response");
                     Console.WriteLine("Please press Enter to continue");

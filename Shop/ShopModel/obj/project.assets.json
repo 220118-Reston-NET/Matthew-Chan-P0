@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Matthew Chan\\Desktop\\Revature\\Project\\Shop\\ShopModel\\ShopModel.csproj",
+      "projectUniqueName": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj",
       "projectName": "ShopModel",
-      "projectPath": "C:\\Users\\Matthew Chan\\Desktop\\Revature\\Project\\Shop\\ShopModel\\ShopModel.csproj",
+      "projectPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj",
       "packagesPath": "C:\\Users\\Matthew Chan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Matthew Chan\\Desktop\\Revature\\Project\\Shop\\ShopModel\\obj\\",
+      "outputPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Matthew Chan\\AppData\\Roaming\\NuGet\\NuGet.Config"
