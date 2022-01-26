@@ -1,16 +1,22 @@
 namespace CustomerModel;
 public class Customer{
 
-    private string _name;
-    private int _age;
-    private string _age;
-    private string _address;
-    private string _email;
-    private string _PhoneNumber;
-    private static int _CurrentUniqueCustomerID;
+    public string _name;
+    public int _age;
+    public string _address;
+    public string _email;
+    public string _phoneNumber;
+    //private static int _CurrentUniqueCustomerID;
+    private List<Order> _orders;
+
+    public List<Order> Order{
+        get {return _orders;}
+        set {_order = value;} // remember to come back to decide how to do orders
+    }
+
     public string Name { 
         get{
-            return Name;
+            return _name;
         } 
         set{
             if(string.IsNullOrEmpty(value)){
@@ -56,16 +62,17 @@ public class Customer{
     }
     public string PhoneNumber { 
         get{
-            return _PhoneNumber;
+            return _phoneNumber;
         } 
         set{
             if(string.IsNullOrEmpty(value)){
                 throw new Exception("Error, Empty Value is not permissable");
             }
-            _PhoneNumber = value;
+            _phoneNumber = value;
         } 
     }
 
+    
     public Customer(){
         Name = "John Smith";
         Age = 33;
