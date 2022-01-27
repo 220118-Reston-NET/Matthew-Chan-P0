@@ -26,7 +26,7 @@ namespace ShopUI
                 case "0":
                     return "Exit";
                 case "1":
-                    return "Exit";
+                    return "AddCustomer";
                 default:
                     Console.WriteLine("Please input a valid response");
                     Console.WriteLine("Please press Enter to continue");

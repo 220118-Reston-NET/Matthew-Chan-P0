@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ShopModel\ShopModel.csproj" />
+    <ProjectReference Include="..\ShopDL\ShopDL.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

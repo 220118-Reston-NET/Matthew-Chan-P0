@@ -1,7 +1,9 @@
-﻿namespace ShopBL;
+﻿using ShopModel;
 public class ICustomerBL
 {
     public interface ICustomerBL {
-        Shop AddCustomer (Customer c_customer);
+        Customer AddCustomer (Customer c_customer);
+
+        //List<CustomerModel> SearchCustomer(string c_name);
     }
 }

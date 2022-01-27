@@ -7,13 +7,13 @@ public class Customer{
     public string _email;
     public string _phoneNumber;
     //private static int _CurrentUniqueCustomerID;
-    private List<Order> _orders;
+    /* private List<Order> _orders;
 
     public List<Order> Order{
         get {return _orders;}
         set {_order = value;} // remember to come back to decide how to do orders
     }
-
+    */
     public string Name { 
         get{
             return _name;
@@ -78,7 +78,7 @@ public class Customer{
         Age = 33;
         Address = "Utopia";
         Email = "John.Smith@gmail.com";
-        PhoneNumber = 123-456-7890;
+        PhoneNumber = "123-456-7890";
     }
     
 }

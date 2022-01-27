@@ -1,3 +1,4 @@
+using System.Text.Json;
 using ShopModel;
 
 namespace CustomerDL{
@@ -6,7 +7,7 @@ namespace CustomerDL{
         private string _filepath = "../ShopDL/Database/"; // cause our main method is in pokeUI
         private string _jsonString;
 
-        public Pokemon AddCustomer(Customer c_customer)
+        public Customer AddCustomer(Customer c_customer)
         {
             //So we can change which JSOn files we can pick on other methods
             string path = _filepath + "Customer.json";

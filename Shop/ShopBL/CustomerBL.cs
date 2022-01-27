@@ -1,23 +1,29 @@
+using ShopDL;
 using ShopModel;
 
-namespece ShopBL{
-    public class ShopBL: IShopBL{
-
+namespace CustomerBL{
+    public class CustomerBL: ICustomerBL{
+        // Dependency Injection Pattern
         // ==================================
-        private IRepsoitory _repo;
+        private IRepsitory _repo;
 
-        public ShopBL(IRepository p_rep){
-            _repo = p_repo;
+        public CustomerBL(IRepository c_rep){
+            _repo = c_repo;
         }
         // ==================================
 
-        public Shop AddCustomers(Shop p_){
+        public Customer AddCustomers(Customer c_customer){
             Random rand = new Random();
 
-            //It will either subtract or add a range from -5 to 5
-            //p_poke.Attack += rand.Next(-5,5);
+            //c_customer.uniqueID == rand.Next(0,9999999); will determine a way to actually make it unique later, or should just do some kind of incrmeent with a static variable would work too
 
-            List<Customer> listOfCustomers - _repo.GetAllShop();
+            return _repo.AddCustomer(c_customer);
         }
+
+        /*
+        public List<CustomerModel SearchCustomer(string c_name){
+            List<Customer> listOfCustomers - _repo.GetAllCustomer();
+        }
+        */
     }
 }
