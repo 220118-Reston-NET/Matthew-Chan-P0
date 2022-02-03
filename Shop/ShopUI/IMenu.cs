@@ -1,6 +1,14 @@
 namespace ShopUI
 {
+    public enum MenuType {
+        MainMenu,
+        Exit,
+        AddCustomer,
+        SearchCustomer,
+    }
     public interface IMenu{
+
+        
         /// <summary>
         /// Will dispaly the menu and user vhoices in the terminal
         /// </summary>

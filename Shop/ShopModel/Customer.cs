@@ -1,6 +1,6 @@
-namespace CustomerModel;
+namespace ShopModel;
 public class Customer{
-
+    /*
     public string _name;
     public int _age;
     public string _address;
@@ -13,7 +13,7 @@ public class Customer{
         get {return _orders;}
         set {_order = value;} // remember to come back to decide how to do orders
     }
-    */
+
     public string Name { 
         get{
             return _name;
@@ -71,8 +71,14 @@ public class Customer{
             _phoneNumber = value;
         } 
     }
-
+    */
     
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public string Address { get; set; }
+    public string Email {get; set; }
+    public string PhoneNumber { get; set; }
+
     public Customer(){
         Name = "John Smith";
         Age = 33;
@@ -80,5 +86,7 @@ public class Customer{
         Email = "John.Smith@gmail.com";
         PhoneNumber = "123-456-7890";
     }
-    
+    public override string ToString(){
+        return $"Name: {Name}\nAge: {Age}\nAddress: {Address}\nEmail: {Email}\nPhoneNumber: {PhoneNumber}";
+    }
 }

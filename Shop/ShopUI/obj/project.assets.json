@@ -2,6 +2,46 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Microsoft.Extensions.Configuration/6.0.2-mauipre.1.22054.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.2-mauipre.1.22054.8",
+          "Microsoft.Extensions.Primitives": "6.0.2-mauipre.1.22054.8"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/6.0.2-mauipre.1.22054.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "6.0.2-mauipre.1.22054.8"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/6.0.2-mauipre.1.22054.8": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.2-mauipre.1.22054.8"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.Extensions.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Primitives.dll": {}
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
       "Serilog/2.10.0": {
         "type": "package",
         "compile": {
@@ -23,6 +63,18 @@
           "lib/net5.0/Serilog.Sinks.File.dll": {}
         }
       },
+      "System.Runtime.CompilerServices.Unsafe/6.0.2-mauipre.1.22054.8": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
       "ShopBL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -41,6 +93,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.2-mauipre.1.22054.8",
           "ShopModel": "1.0.0"
         },
         "compile": {
@@ -63,6 +116,69 @@
     }
   },
   "libraries": {
+    "Microsoft.Extensions.Configuration/6.0.2-mauipre.1.22054.8": {
+      "sha512": "r31wRMI9ceMihv6FAQ0LPl7JI8JvoOnPjhu2kB2/jBekfF7Yxl7zd4dvaCoXJVwtRQujEyoh2my4OtviBmbGGg==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration/6.0.2-mauipre.1.22054.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Configuration.dll",
+        "lib/net461/Microsoft.Extensions.Configuration.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.xml",
+        "microsoft.extensions.configuration.6.0.2-mauipre.1.22054.8.nupkg.sha512",
+        "microsoft.extensions.configuration.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/6.0.2-mauipre.1.22054.8": {
+      "sha512": "pkCZm4uUT46AOct3trvxYkh/L7wKsnFZZXsJXlM36rf6CHboXeENanOBN7chxDUKvA2a8Ejx9ojOE7FPHmoi4A==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.abstractions/6.0.2-mauipre.1.22054.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "lib/net461/Microsoft.Extensions.Configuration.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.xml",
+        "microsoft.extensions.configuration.abstractions.6.0.2-mauipre.1.22054.8.nupkg.sha512",
+        "microsoft.extensions.configuration.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Primitives/6.0.2-mauipre.1.22054.8": {
+      "sha512": "lVtYpBd21BXlclaAX6rMoJIbjojo069vlqhKHxhQs9tVeHnHB7sVj91LchF9xAG0xDbUsFujy8xqOTELYuXm5w==",
+      "type": "package",
+      "path": "microsoft.extensions.primitives/6.0.2-mauipre.1.22054.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Primitives.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/Microsoft.Extensions.Primitives.dll",
+        "lib/net461/Microsoft.Extensions.Primitives.xml",
+        "lib/net6.0/Microsoft.Extensions.Primitives.dll",
+        "lib/net6.0/Microsoft.Extensions.Primitives.xml",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+        "microsoft.extensions.primitives.6.0.2-mauipre.1.22054.8.nupkg.sha512",
+        "microsoft.extensions.primitives.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Serilog/2.10.0": {
       "sha512": "+QX0hmf37a0/OZLxM3wL7V6/ADvC1XihXN4Kq/p6d8lCPfgkRdiuhbWlMaFjR9Av0dy5F0+MBeDmDdRZN/YwQA==",
       "type": "package",
@@ -114,6 +230,31 @@
         "serilog.sinks.file.nuspec"
       ]
     },
+    "System.Runtime.CompilerServices.Unsafe/6.0.2-mauipre.1.22054.8": {
+      "sha512": "/xD4/PF6icn6aQJQy43rg7SIa/VJ7OFlt5eQ7ceVpwW4fMVXWZC3F5jW5NkEee8XEpIq1mjE/KAi8xfSPP+9Ig==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/6.0.2-mauipre.1.22054.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.6.0.2-mauipre.1.22054.8.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "ShopBL/1.0.0": {
       "type": "project",
       "path": "../ShopBL/ShopBL.csproj",
@@ -145,11 +286,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopUI\\ShopUI.csproj",
+      "projectUniqueName": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopUI\\ShopUI.csproj",
       "projectName": "ShopUI",
-      "projectPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopUI\\ShopUI.csproj",
+      "projectPath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopUI\\ShopUI.csproj",
       "packagesPath": "C:\\Users\\Matthew Chan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopUI\\obj\\",
+      "outputPath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopUI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Matthew Chan\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -164,14 +305,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopBL\\ShopBL.csproj": {
-              "projectPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopBL\\ShopBL.csproj"
+            "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopBL\\ShopBL.csproj": {
+              "projectPath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopBL\\ShopBL.csproj"
             },
-            "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopDL\\ShopDL.csproj": {
-              "projectPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopDL\\ShopDL.csproj"
+            "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopDL\\ShopDL.csproj": {
+              "projectPath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopDL\\ShopDL.csproj"
             },
-            "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj": {
-              "projectPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj"
+            "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj": {
+              "projectPath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj"
             }
           }
         }

@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "TIQ8tbw4B1LDE5SMl3i/9H6+oHagUZcHIXewleQyURrHrb9nCYdA4h7jmAl6LHr/ImvLiH8GRIpAh7di2hUl+g==",
+  "dgSpecHash": "SgWblY9s4ygnvxQEfftV/nDz1oDhcZZCDmAxrDCtoQddiZrND93+ubsAZpSgIIlNHieaHAepZ/0Wanc/2/hhNw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopUI\\ShopUI.csproj",
+  "projectFilePath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopUI\\ShopUI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Matthew Chan\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.2-mauipre.1.22054.8\\microsoft.extensions.configuration.6.0.2-mauipre.1.22054.8.nupkg.sha512",
+    "C:\\Users\\Matthew Chan\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.2-mauipre.1.22054.8\\microsoft.extensions.configuration.abstractions.6.0.2-mauipre.1.22054.8.nupkg.sha512",
+    "C:\\Users\\Matthew Chan\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.2-mauipre.1.22054.8\\microsoft.extensions.primitives.6.0.2-mauipre.1.22054.8.nupkg.sha512",
     "C:\\Users\\Matthew Chan\\.nuget\\packages\\serilog\\2.10.0\\serilog.2.10.0.nupkg.sha512",
-    "C:\\Users\\Matthew Chan\\.nuget\\packages\\serilog.sinks.file\\5.0.0\\serilog.sinks.file.5.0.0.nupkg.sha512"
+    "C:\\Users\\Matthew Chan\\.nuget\\packages\\serilog.sinks.file\\5.0.0\\serilog.sinks.file.5.0.0.nupkg.sha512",
+    "C:\\Users\\Matthew Chan\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.2-mauipre.1.22054.8\\system.runtime.compilerservices.unsafe.6.0.2-mauipre.1.22054.8.nupkg.sha512"
   ],
   "logs": []
 }

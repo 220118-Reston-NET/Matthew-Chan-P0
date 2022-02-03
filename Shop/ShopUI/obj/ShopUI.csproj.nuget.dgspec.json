@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopUI\\ShopUI.csproj": {}
+    "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopUI\\ShopUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopBL\\ShopBL.csproj": {
+    "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopBL\\ShopBL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopBL\\ShopBL.csproj",
+        "projectUniqueName": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopBL\\ShopBL.csproj",
         "projectName": "ShopBL",
-        "projectPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopBL\\ShopBL.csproj",
+        "projectPath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopBL\\ShopBL.csproj",
         "packagesPath": "C:\\Users\\Matthew Chan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopBL\\obj\\",
+        "outputPath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopBL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matthew Chan\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,11 +26,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopDL\\ShopDL.csproj": {
-                "projectPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopDL\\ShopDL.csproj"
+              "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopDL\\ShopDL.csproj": {
+                "projectPath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopDL\\ShopDL.csproj"
               },
-              "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj": {
-                "projectPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj"
+              "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj": {
+                "projectPath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj"
               }
             }
           }
@@ -63,14 +63,14 @@
         }
       }
     },
-    "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopDL\\ShopDL.csproj": {
+    "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopDL\\ShopDL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopDL\\ShopDL.csproj",
+        "projectUniqueName": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopDL\\ShopDL.csproj",
         "projectName": "ShopDL",
-        "projectPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopDL\\ShopDL.csproj",
+        "projectPath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopDL\\ShopDL.csproj",
         "packagesPath": "C:\\Users\\Matthew Chan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopDL\\obj\\",
+        "outputPath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopDL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matthew Chan\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -85,8 +85,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj": {
-                "projectPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj"
+              "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj": {
+                "projectPath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj"
               }
             }
           }
@@ -100,6 +100,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[6.0.2-mauipre.1.22054.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -119,14 +125,14 @@
         }
       }
     },
-    "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj": {
+    "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj",
+        "projectUniqueName": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj",
         "projectName": "ShopModel",
-        "projectPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj",
+        "projectPath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj",
         "packagesPath": "C:\\Users\\Matthew Chan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\obj\\",
+        "outputPath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matthew Chan\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -171,14 +177,14 @@
         }
       }
     },
-    "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopUI\\ShopUI.csproj": {
+    "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopUI\\ShopUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopUI\\ShopUI.csproj",
+        "projectUniqueName": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopUI\\ShopUI.csproj",
         "projectName": "ShopUI",
-        "projectPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopUI\\ShopUI.csproj",
+        "projectPath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopUI\\ShopUI.csproj",
         "packagesPath": "C:\\Users\\Matthew Chan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopUI\\obj\\",
+        "outputPath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matthew Chan\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -193,14 +199,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopBL\\ShopBL.csproj": {
-                "projectPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopBL\\ShopBL.csproj"
+              "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopBL\\ShopBL.csproj": {
+                "projectPath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopBL\\ShopBL.csproj"
               },
-              "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopDL\\ShopDL.csproj": {
-                "projectPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopDL\\ShopDL.csproj"
+              "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopDL\\ShopDL.csproj": {
+                "projectPath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopDL\\ShopDL.csproj"
               },
-              "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj": {
-                "projectPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj"
+              "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj": {
+                "projectPath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj"
               }
             }
           }

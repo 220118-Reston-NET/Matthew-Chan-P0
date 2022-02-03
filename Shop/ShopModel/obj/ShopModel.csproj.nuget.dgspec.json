@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj": {}
+    "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj": {
+    "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj",
+        "projectUniqueName": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj",
         "projectName": "ShopModel",
-        "projectPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj",
+        "projectPath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\ShopModel.csproj",
         "packagesPath": "C:\\Users\\Matthew Chan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\obj\\",
+        "outputPath": "c:\\Users\\Matthew Chan\\Desktop\\RevatureProject\\Shop\\ShopModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matthew Chan\\AppData\\Roaming\\NuGet\\NuGet.Config"
