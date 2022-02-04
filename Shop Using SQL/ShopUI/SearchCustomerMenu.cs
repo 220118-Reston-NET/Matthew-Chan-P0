@@ -28,7 +28,7 @@ namespace ShopUI
             {
                 case "0":
                     return "MainMenu";
-                case "1":
+                /*case "1":
                 Console.WriteLine("Enter PokeId:");
                 try{
                     int custId = Convert.ToInt32(Console.ReadLine());
@@ -47,7 +47,7 @@ namespace ShopUI
                     Console.WriteLine("Please press enter to continue.");
                     Console.ReadLine();
                     return "SearchCustomer";
-                }
+                }*/
                 case "2":
                     //Logic to grab user input
                     Console.WriteLine("Please enter a phone number in \"XXX-XXX-XXXX\" format: ");

@@ -6,13 +6,9 @@ namespace ShopDL{
         Customer AddCustomer(Customer c_cust);
 
         List<Customer> GetAllCustomer();
+        //List<Customer> GetCustomerByCustId(int c_custId);
     }
     
-    public interface ISQLCustomerRepository
-    {
-        Customer GetCustomerByCustId(Customer c_cust);
-        List<Customer> GetAllCustomer();
-    }
     public interface IStoreFrontRepository
     {
         StoreFront AddStoreFront(StoreFront s_store);

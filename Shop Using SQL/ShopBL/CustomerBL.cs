@@ -13,21 +13,24 @@ namespace ShopBL{
         }
         // ==================================
 
+        
+        
         public Customer AddCustomer(Customer c_customer){
-            Random rand = new Random();
-
-            //c_customer.uniqueID == rand.Next(0,9999999); will determine a way to actually make it unique later, or should just do some kind of incrmeent with a static variable would work too
 
             return _repo.AddCustomer(c_customer);
+        } 
+        
+        /*
+        public Customer GetCustomerByCustId(int c_custId){
+            return _repo.GetCustomerByCustId(c_custId);
         }
-
+        */
         public List<Customer> GetAllCustomers(){
             return _repo.GetAllCustomer();
         }
         
-        public List<Customer> GetCustomerByCustId(int c_custId){
-            return _repo.GetCustomerByCustId(c_custId);
-        }
+
+        
         public List<Customer> SearchCustomer(string c_name){
             List<Customer> listOfCustomers = _repo.GetAllCustomer();
             // LINQ library
@@ -59,6 +62,7 @@ namespace ShopBL{
             else{
                 return false;
             }
-        }
+            
+        } 
     }
 }
