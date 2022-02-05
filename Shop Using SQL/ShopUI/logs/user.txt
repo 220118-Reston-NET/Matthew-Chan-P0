@@ -196,3 +196,57 @@
 2022-02-03 20:55:53.783 -08:00 [INF] Displaying MainMenu to user
 2022-02-03 20:56:01.464 -08:00 [INF] Displaying MainMenu to user
 2022-02-03 20:56:35.863 -08:00 [INF] Exiting application
+2022-02-03 20:56:50.638 -08:00 [INF] Displaying MainMenu to user
+2022-02-03 20:56:51.998 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-03 20:56:58.239 -08:00 [INF] Displaying MainMenu to user
+2022-02-03 21:24:01.206 -08:00 [INF] Displaying MainMenu to user
+2022-02-03 21:24:03.800 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-03 21:24:07.834 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-03 21:24:15.528 -08:00 [INF] Displaying MainMenu to user
+2022-02-03 21:24:30.249 -08:00 [INF] Displaying MainMenu to user
+2022-02-03 21:24:31.080 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-03 21:24:43.401 -08:00 [INF] Displaying MainMenu to user
+2022-02-03 21:29:26.262 -08:00 [INF] Exiting application
+2022-02-03 21:29:53.162 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-04 09:17:15.292 -08:00 [INF] Displaying MainMenu to user
+2022-02-04 09:17:17.088 -08:00 [INF] Exiting application
+2022-02-04 09:21:13.491 -08:00 [INF] Displaying MainMenu to user
+2022-02-04 09:21:15.620 -08:00 [INF] Displaying MainMenu to user
+2022-02-04 09:21:18.262 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-04 09:24:26.746 -08:00 [INF] Displaying MainMenu to user
+2022-02-04 09:46:30.548 -08:00 [INF] Exiting application
+2022-02-04 10:39:23.152 -08:00 [INF] Displaying MainMenu to user
+2022-02-04 10:39:26.918 -08:00 [INF] Displaying MainMenu to user
+2022-02-04 10:39:27.655 -08:00 [INF] Exiting application
+2022-02-04 10:40:19.833 -08:00 [INF] Displaying MainMenu to user
+2022-02-04 12:01:39.085 -08:00 [INF] Exiting application
+2022-02-04 12:02:03.357 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-04 12:58:38.039 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-04 14:28:46.586 -08:00 [INF] Displaying MainMenu to user
+2022-02-04 14:28:48.687 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-04 14:28:52.672 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-04 14:28:54.951 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-04 15:56:28.205 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-04 16:52:25.965 -08:00 [INF] Displaying MainMenu to user
+2022-02-04 16:52:27.125 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-04 16:52:43.989 -08:00 [INF] Displaying MainMenu to user
+2022-02-04 17:13:07.358 -08:00 [INF] Displaying MainMenu to user
+2022-02-04 17:13:08.292 -08:00 [INF] Exiting application
+2022-02-04 17:17:16.019 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-04 17:17:20.516 -08:00 [INF] Displaying MainMenu to user
+2022-02-04 17:17:22.505 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-04 17:17:28.153 -08:00 [INF] Displaying MainMenu to user
+2022-02-04 17:17:32.051 -08:00 [INF] Displaying MainMenu to user
+2022-02-04 17:17:32.866 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-04 17:18:04.714 -08:00 [INF] Displaying MainMenu to user
+2022-02-04 17:19:11.713 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-04 17:24:01.009 -08:00 [INF] Displaying MainMenu to user
+2022-02-04 17:24:01.656 -08:00 [INF] Exiting application
+2022-02-04 17:24:34.676 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-04 17:24:38.807 -08:00 [INF] Displaying MainMenu to user
+2022-02-04 17:24:41.311 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-04 17:46:45.132 -08:00 [INF] Displaying MainMenu to user
+2022-02-04 17:46:46.110 -08:00 [INF] Exiting application
+2022-02-04 17:47:09.201 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-04 17:47:23.550 -08:00 [INF] Displaying MainMenu to user
+2022-02-04 17:47:27.238 -08:00 [INF] Exiting application

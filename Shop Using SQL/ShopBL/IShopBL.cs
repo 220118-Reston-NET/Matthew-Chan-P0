@@ -5,7 +5,7 @@ namespace ShopBL
     
     public interface ICustomerBL {
         Customer AddCustomer (Customer c_cust);
-        //public List<Customer> GetCustomerByCustId(int c_custId);
+        public List<Customer> SearchCustomerFromId(int c_custId);
 
         List<Customer> SearchCustomer(string c_name);
         List<Customer> SearchCustomerFromNumber(string c_pnum);

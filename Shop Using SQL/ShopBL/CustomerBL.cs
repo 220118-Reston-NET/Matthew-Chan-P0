@@ -30,7 +30,13 @@ namespace ShopBL{
         }
         
 
-        
+        public List<Customer> SearchCustomerFromId(int c_Id){
+            List<Customer> listOfCustomers = _repo.GetAllCustomer();
+            // LINQ library
+            return listOfCustomers
+                        .Where(cust => cust.custId == c_Id)
+                        .ToList();
+        }
         public List<Customer> SearchCustomer(string c_name){
             List<Customer> listOfCustomers = _repo.GetAllCustomer();
             // LINQ library
