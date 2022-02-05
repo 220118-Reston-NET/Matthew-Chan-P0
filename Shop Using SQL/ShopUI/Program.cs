@@ -30,11 +30,11 @@ while(repeat){
     switch(ans){ 
         case "SearchStoreFront":
             Log.Information("Adding stores");
-            menu = new SearchStoreFrontMenu(new StoreFrontBL(new StoreFrontRepository()));
+            menu = new SearchStoreFrontMenu(new StoreFrontBL(new SQLStoreFrontRepository(_connectionString)));
             break;
         case "AddStore":
             Log.Information("Adding stores");
-            menu = new AddStoreFrontMenu(new StoreFrontBL(new SQLCustomerRepository(_connectionString)));
+            menu = new AddStoreFrontMenu(new StoreFrontBL(new SQLStoreFrontRepository(_connectionString)));
             break;
         case "SearchCustomer":
             Log.Information("Displaying SearchPokemon Menu to user");

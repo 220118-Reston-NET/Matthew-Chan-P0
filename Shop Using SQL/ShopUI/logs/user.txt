@@ -250,3 +250,7 @@
 2022-02-04 17:47:09.201 -08:00 [INF] Displaying SearchPokemon Menu to user
 2022-02-04 17:47:23.550 -08:00 [INF] Displaying MainMenu to user
 2022-02-04 17:47:27.238 -08:00 [INF] Exiting application
+2022-02-04 22:20:22.898 -08:00 [INF] Exiting application
+2022-02-04 22:20:38.487 -08:00 [INF] Adding stores
+2022-02-04 22:24:11.464 -08:00 [INF] Displaying MainMenu to user
+2022-02-04 22:24:11.925 -08:00 [INF] Exiting application

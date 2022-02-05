@@ -114,14 +114,24 @@ namespace ShopDL
             return listOfCustomer;
         }
 
-        /*
-        public StoreFront AddStore(StoreFront s_store)
+
+    }
+    public class SQLStoreFrontRepository : IStoreFrontRepository
+    {
+        private readonly string _connectionStrings;
+        public SQLStoreFrontRepository(string p_connectionStrings)
+        {
+            _connectionStrings = p_connectionStrings;
+        }
+
+        
+        public StoreFront AddStoreFront(StoreFront s_store)
         {
             //@ before the string will ignore special characters like \n
             //This is where you specify the sql statement required to do whatever operation you need based on the method
             //
             string sqlQuery = @"insert into StoreFront 
-                            values(@custId, @custName, @custAge, @custAddress, @custEmail,@custPhoneNumber)";
+                            values(@storeName, @storeAddress)";
 
             //using block is different from our normal using statement
             //It is used to automatically close any resource you stated inside of the parenthesis
@@ -134,21 +144,44 @@ namespace ShopDL
                 //SqlCommand class is a class specialized in executing SQL statements
                 //Command will how the sqlQuery that will execute on the currently connection we have in the con object
                 SqlCommand command = new SqlCommand(sqlQuery, con);
-                command.Parameters.AddWithValue("@custId", c_cust.custId);
-                command.Parameters.AddWithValue("@custName", c_cust.Name);
-                command.Parameters.AddWithValue("@custAge", c_cust.Age);
-                command.Parameters.AddWithValue("@custAddress", c_cust.Address);
-                command.Parameters.AddWithValue("@custEmail", c_cust.Email);
-                command.Parameters.AddWithValue("@custPhoneNumber", c_cust.PhoneNumber);
-
+                command.Parameters.AddWithValue("@storeName", s_store.Name);
+                command.Parameters.AddWithValue("@storeAddress", s_store.Address);
+ 
                 //Executes the SQL statement
                 command.ExecuteNonQuery();
             }
 
-            return c_cust;
+            return s_store;
         }
-*/
 
+        public List<StoreFront> GetAllStoreFront()
+        {
+            List<StoreFront> listOfStoreFront = new List<StoreFront>();
 
+            string sqlQuery = @"select * from StoreFront";
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                //Opens connection to the database
+                con.Open();
+                //Create command object that has our sqlQuery and con object
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                //SqlDataReader is a class specialized in reading outputs that came from a sql statement
+                //Usually this outputs are in a form of a table and keep that in mind
+                SqlDataReader reader = command.ExecuteReader();
+                //Read() methods checks if you have more rows to go through
+                //If there is another row = true, if not = false
+                while (reader.Read())
+                {
+                    listOfStoreFront.Add(new StoreFront(){
+                        //Zero-based column index
+                        storeId = reader.GetInt32(0),
+                        Name = reader.GetString(1), 
+                        Address = reader.GetString(2)
+                    });
+                }
+            } 
+
+            return listOfStoreFront;
+        }
     }
 }
