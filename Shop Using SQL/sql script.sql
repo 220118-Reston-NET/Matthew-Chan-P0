@@ -44,11 +44,15 @@ CREATE TABLE  StoreFront(
 
 CREATE TABLE Inventory(
 	inventoryId int IDENTITY(1,1) PRIMARY KEY NOT NULL,
-	prodQuantitiy int,
 	prodName varchar(50) FOREIGN KEY REFERENCES Product(prodName),
+	prodQuantitiy int,
 	storeId int FOREIGN KEY REFERENCES StoreFront(storeId)
 )
+alter table Inventory 
+add storeId int FOREIGN KEY REFERENCES StoreFront(storeId)
 
+insert into Inventory
+values (5, 'Pencil', 1)
 
 
 insert into StoreFront 
@@ -58,23 +62,25 @@ values('Sprouts', '0000 Sprouts Lane'),
 
 	
 CREATE TABLE  LineItem(
-	lineItemId int PRIMARY KEY,
+	lineItemId int IDENTITY(1,1) PRIMARY KEY,
 	itemName varchar(50) FOREIGN KEY REFERENCES Product(prodName),
-	itemQuantity int,
-	orderNumber int FOREIGN KEY REFERENCES Orders(orderNumber)
+	itemQuantity int
 )
 
+insert into LineItem
+values(1, 'Pencil', 1, 10)
 
-
-
+alter table LineItem 
+add constraint lineItemId IDENTITY(1,1)
 
 CREATE TABLE Orders(
 	orderNumber int PRIMARY KEY not null,
 	custId int FOREIGN KEY REFERENCES Customer(custId) 
 	storeAddress int FOREIGN KEY REFERENCES StoreFront(storeName)
+	lineItemId int FOREIGN KEY REFERENCES LineItem (lineItemId)
 )
 ALTER TABLE Orders
-ADD storeId int FOREIGN KEY REFERENCES StoreFront(storeId) 
+ADD lineItemId int FOREIGN KEY REFERENCES LineItem(lineItemId) 
 
 CREATE TABLE ShopOrders(
 	storeAddress varchar (50) FOREIGN KEY REFERENCES StoreFront(storeAddress),
@@ -83,4 +89,12 @@ CREATE TABLE ShopOrders(
 
 
 select * from Customer
+
+-----------------------------------------------------------------------------------
+
+SELECT *  FROM StoreFront sf 
+INNER JOIN Inventory i ON i.storeId = sf.storeId 
+
+
+
 

@@ -33,16 +33,16 @@ namespace ShopBL{
                         .Where(store => store.Name.Contains(s_name))
                         .ToList();
         }
-        /*
-        public void SearchStoreFrontProducts(string s_product){
+        
+        public List<string> SearchStoreFrontProducts(string s_product){
             List<StoreFront> listOfStoreFronts = _repo.GetAllStoreFront();
             // LINQ library
-                
+
             
             return listOfStoreFronts
-                        .Where(store => store.Products.Contains(s_product))
+                        .Where(store => store.Inv.Products.Name.Contains(s_product))
                         .ToList()); 
-        }*/
+        }
         
         public bool CheckIfEmpty(List<StoreFront> listOfStores){
             if(listOfStores.Any() == false){
