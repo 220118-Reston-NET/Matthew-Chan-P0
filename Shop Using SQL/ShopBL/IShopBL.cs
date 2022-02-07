@@ -5,7 +5,7 @@ namespace ShopBL
     
     public interface ICustomerBL {
         Customer AddCustomer (Customer c_cust);
-        public List<Customer> SearchCustomerFromId(int c_custId);
+        public List<Customer> SearchCustomerFromCustId(int c_custId);
 
         List<Customer> SearchCustomer(string c_name);
         List<Customer> SearchCustomerFromNumber(string c_pnum);
@@ -29,10 +29,24 @@ namespace ShopBL
         StoreFront AddStoreFront (StoreFront s_store);
         List<StoreFront> SearchStoreFrontName(string s_store);
         List<StoreFront> GetAllStoreFronts();
-        //void SearchStoreFrontProducts(string s_product);
+        List<StoreFront> SearchStoreFrontProducts(string s_product);
+
+        //
+        Inventory GetSpecificInventory(int id);
+        //List<Product> GetProductsFromShopId(int id);
+
+        void printProductsInInventory(Inventory inv);
 
         bool CheckIfEmpty(List<StoreFront> listOfCust);
     }
+
+    /* public interface IInventoryBL{
+        List<StoreFront> SearchInventoryFromStoreId(int s_Id);
+        List<Inventory> GetAllInventories();
+        List<Products> GetProductsFromShopId(int ShopId);
+
+        bool CheckIfEmpty(List<StoreFront> listOfCust);
+    } */
 
     
 }

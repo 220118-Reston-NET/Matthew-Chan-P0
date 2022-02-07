@@ -8,10 +8,12 @@ namespace ShopBL{
         // Dependency Injection Pattern
         // ==================================
         private IStoreFrontRepository _repo;
-
+        
         public StoreFrontBL(IStoreFrontRepository s_repo){
             _repo = s_repo;
         }
+
+        
         // ==================================
 
         public StoreFront AddStoreFront(StoreFront c_StoreFront){
@@ -34,14 +36,14 @@ namespace ShopBL{
                         .ToList();
         }
         
-        public List<string> SearchStoreFrontProducts(string s_product){
+        public List<StoreFront> SearchStoreFrontProducts(string s_product){
             List<StoreFront> listOfStoreFronts = _repo.GetAllStoreFront();
             // LINQ library
 
             
-            return listOfStoreFronts
-                        .Where(store => store.Inv.Products.Name.Contains(s_product))
-                        .ToList()); 
+            return listOfStoreFronts;
+                        //.Where(store => store.Inv.Products.Contains(s_product))
+                        //.ToList()); 
         }
         
         public bool CheckIfEmpty(List<StoreFront> listOfStores){
@@ -53,6 +55,22 @@ namespace ShopBL{
             }
         }
 
+        public Inventory GetSpecificInventory(int id){
+            Inventory specInventory = _repo.GetAnInventory(id);
+            return specInventory;
+        }
+
+        public void printProductsInInventory(Inventory inv){
+            for(int i = 0; i < inv.Products.Count; i++) {
+                Console.WriteLine(inv.Products[i].Name + ": " + inv.quantity[i]);
+            }
+        }
+    
+        
+
+        /*public List<Product> GetProductsFromShopId (int sId) {
+            List<Products> = _
+        }*/
         
     }
 }

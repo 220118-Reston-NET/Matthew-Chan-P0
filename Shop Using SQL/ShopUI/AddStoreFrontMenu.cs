@@ -23,7 +23,7 @@ namespace ShopUI
             Console.WriteLine("Enter StoreFront information");
             Console.WriteLine("[4] Name - " + _newStore.Name );
             Console.WriteLine("[3] Address - " + _newStore.Address );
-            Console.WriteLine("[2] Products:" + _newStore.Products);
+            Console.WriteLine("[2] Products:" + _newStore.Inv);
             Console.WriteLine("[1] Save");
             Console.WriteLine("[0] Go Back");
         }
@@ -49,7 +49,7 @@ namespace ShopUI
                         Console.ReadLine();
                     }
                     return "MainMenu";
-                case "2":
+                /*case "2":
                     Console.WriteLine("Please enter how many products you would like to add!");
                     int numberOfProducts = Convert.ToInt32(Console.ReadLine());
                     for(int i = 0; i < numberOfProducts; i++){
@@ -61,7 +61,7 @@ namespace ShopUI
                         string quantity = Console.ReadLine();
                         _newStore.Products.Add(new Product(prodName,price));
                     }
-                    return "AddStoreFront";
+                    return "AddStoreFront"; */
                 case "3":
                     Console.WriteLine("Please enter an address!");
                     _newStore.Address = Console.ReadLine();

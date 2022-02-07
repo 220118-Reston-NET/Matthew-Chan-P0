@@ -1,4 +1,4 @@
-
+/*
 using System.Text.Json;
 using ShopModel;
 
@@ -25,7 +25,6 @@ namespace ShopDL{
             Console.ReadLine();
             File.WriteAllText(path , _jsonString);
             
-            
             return s_store;
         }
 
@@ -37,3 +36,4 @@ namespace ShopDL{
         }
     }
 }
+*/

@@ -64,11 +64,8 @@ namespace ShopUI
                         Console.ReadLine();
                         return "SearchStoreFront";
                     }
-                    foreach (var item in listOfStoreFromName)
-                    {
-                        Console.WriteLine("================");
-                        Console.WriteLine(item);
-                    }
+
+                    Console.WriteLine("The store " + listOfStoreFromName[0].Name + " was found.");
                     Console.WriteLine("Please press Enter to continue");
                     Console.ReadLine();
 

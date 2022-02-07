@@ -1,15 +1,16 @@
 namespace ShopModel;
 public class LineItem{
     
-    public string ProductName { get; set; }
+    public List<Product> Products { get; set; }
     public int Quantity { get; set; }
     
     public LineItem(){
-        ProductName = "Candy Bar";
+        Products = new List<Product>{};
         Quantity = 1;
     }
     
     public override string ToString(){
-        return $"Product Name: {ProductName}\nQuantity: {Quantity}";
+        string productString = string.Join( "\n", Products);
+        return $"Product Name: {productString}\nQuantity: {Quantity}";
     }
 }

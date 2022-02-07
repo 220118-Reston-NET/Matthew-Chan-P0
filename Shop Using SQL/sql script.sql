@@ -10,50 +10,58 @@ CREATE TABLE  Customer(
 )
 
 
-insert into Customer
-values('John Smith', 33, 'Utopia', 'John.Smith@gmail.com', '123-456-7890'),
-	('Joe Doe', 42, 'Nowhere', 'JoeDoe@hotmail.com', '987-654-3210')
-
-alter table Customer
-alter column custAge int 
-
-
-
-
-	
-	
 CREATE TABLE Product(
-	prodName varchar(50) PRIMARY KEY ,
+	prodId int IDENTITY(1,1) PRIMARY KEY NOT NULL,	
+    prodName varchar(50),
 	prodPrice int,
 	prodDesc varchar (50),
 	prodAgeRestriction int,
 )
 
-insert into Product 
-values('Pencil', 1, 'Used to write', 0),
-	('Paper', 1, 'Used to be written on', 0),
-	('Mouse', 50, 'Computer mouse', 5)
-
-
 CREATE TABLE  StoreFront(
 	storeId int IDENTITY(1,1) PRIMARY KEY NOT NULL,
 	storeName varchar(50),
 	storeAddress varchar(50) 
-) 
-
+)
 
 CREATE TABLE Inventory(
 	inventoryId int IDENTITY(1,1) PRIMARY KEY NOT NULL,
-	prodName varchar(50) FOREIGN KEY REFERENCES Product(prodName),
+	prodId int FOREIGN KEY REFERENCES Product(prodId),
 	prodQuantitiy int,
 	storeId int FOREIGN KEY REFERENCES StoreFront(storeId)
 )
-alter table Inventory 
-add storeId int FOREIGN KEY REFERENCES StoreFront(storeId)
 
-insert into Inventory
-values (5, 'Pencil', 1)
 
+
+CREATE TABLE  LineItem(
+	lineItemId int IDENTITY(1,1) PRIMARY KEY,
+	prodId int FOREIGN KEY REFERENCES Product(prodId),
+	itemQuantity int
+)
+
+
+CREATE TABLE Orders(
+	orderId int IDENTITY(1,1) PRIMARY KEY,
+	custId int FOREIGN KEY REFERENCES Customer(custId), 
+	storeId int FOREIGN KEY REFERENCES StoreFront(storeId)	
+)
+
+CREATE TABLE OrderToLineItem(
+	orderId int FOREIGN  KEY REFERENCES Orders(orderId),
+	lineItemId int FOREIGN KEY REFERENCES LineItem (lineItemId)
+)
+--------------------------------------------------------------------------------
+
+insert into Customer
+values('John Smith', 33, 'Utopia', 'John.Smith@gmail.com', '123-456-7890'),
+	('Joe Doe', 42, 'Nowhere', 'JoeDoe@hotmail.com', '987-654-3210'),
+	('Shiro Nai', 11, 'Disboard', '[ ]', '000-000-0000')
+
+insert into Product 
+values('Pencil', 1, 'Used to write', 0),
+	('Paper', 1, 'Used to be written on', 0),
+	('Mouse', 50, 'Computer mouse', 5),
+	('Laptop', 800, 'Portable PC', 5)
 
 insert into StoreFront 
 values('Sprouts', '0000 Sprouts Lane'),
@@ -61,40 +69,68 @@ values('Sprouts', '0000 Sprouts Lane'),
 	('Costco', '0002 Costco Lane')
 
 	
-CREATE TABLE  LineItem(
-	lineItemId int IDENTITY(1,1) PRIMARY KEY,
-	itemName varchar(50) FOREIGN KEY REFERENCES Product(prodName),
-	itemQuantity int
-)
+insert into Inventory
+values (1, 50, 1),
+	(2, 50, 1),
+	(4, 100, 1),
+	(1, 25, 2),
+	(2, 25, 2),
+	(4, 300, 2)
+
 
 insert into LineItem
-values(1, 'Pencil', 1, 10)
+values(1, 5),
+	(2, 7),
+	(4,2),
+	(1, 50),
+	(2, 50),
+	(4,1)
 
-alter table LineItem 
-add constraint lineItemId IDENTITY(1,1)
 
-CREATE TABLE Orders(
-	orderNumber int PRIMARY KEY not null,
-	custId int FOREIGN KEY REFERENCES Customer(custId) 
-	storeAddress int FOREIGN KEY REFERENCES StoreFront(storeName)
-	lineItemId int FOREIGN KEY REFERENCES LineItem (lineItemId)
-)
-ALTER TABLE Orders
-ADD lineItemId int FOREIGN KEY REFERENCES LineItem(lineItemId) 
 
-CREATE TABLE ShopOrders(
-	storeAddress varchar (50) FOREIGN KEY REFERENCES StoreFront(storeAddress),
-	orderNumber int FOREIGN KEY REFERENCES Orders(orderNumber)
-)
+insert into Orders 
+values (1,1),
+	(2,2)
 
+insert into OrderToLineItem 
+values 	(1,1),
+	(1,2),
+	(1,3),
+	(2,4),
+	(2,5),
+	(2,6)
 
 select * from Customer
 
 -----------------------------------------------------------------------------------
 
-SELECT *  FROM StoreFront sf 
-INNER JOIN Inventory i ON i.storeId = sf.storeId 
+SELECT o.orderId, p.prodName, p.prodPrice, p.prodDesc, p.prodAgeRestriction,  li.itemQuantity, sf.storeAddress
+FROM Customer c  
+INNER JOIN Orders o ON c.custId = o.custId 
+INNER JOIN OrderToLineItem ol ON o.orderId = ol.orderId 
+INNER JOIN LineItem li on ol.lineItemId = li.lineItemId 
+INNER JOIN Product p ON p.prodId  = li.prodId  
+INNER JOIN StoreFront sf ON o.storeId = sf.storeId 
+WHERE c.custId = 1;
 
 
+SELECT * FROM Inventory i 
+Inner Join Product p ON i.prodId = p.prodId 
+
+
+select * from Inventory 
+Inner Join Product p ON i.prodId = p.prodId
+where i.storeId = 1
+
+
+-------------------------------------------------------------------------------------
+
+DROP TABLE OrderToLineItem  
+Drop table Orders  
+Drop TABLE Customer 
+Drop TABLE Inventory 
+DROP TABLE StoreFront  
+Drop TABLE LineItem
+Drop table Product 
 
 

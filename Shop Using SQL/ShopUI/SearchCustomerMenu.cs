@@ -32,7 +32,7 @@ namespace ShopUI
                 Console.WriteLine("Enter Customer Id:");
                 try{
                     int custId = Convert.ToInt32(Console.ReadLine());
-                    List<Customer>listOfCustomer = _custBL.SearchCustomerFromId(custId);
+                    List<Customer>listOfCustomer = _custBL.SearchCustomerFromCustId(custId);
                     foreach(var item in listOfCustomer){
                         Console.WriteLine("=========");
                         Console.WriteLine(item);
