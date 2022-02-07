@@ -13,5 +13,19 @@ namespace ShopDL{
     {
         StoreFront AddStoreFront(StoreFront s_store);
         List<StoreFront> GetAllStoreFront();
+
+
+
+        //Inventory AddInventory(Inventory i_inven);
+        List<Inventory> GetAllInventory();
+        Inventory GetAnInventory(int id);
+
+        
     }
+    public interface IOrderRepository{
+        Order AddOrder(Order o_order);
+        List<Order> GetAllOrder();
+    }
+
+
 }
