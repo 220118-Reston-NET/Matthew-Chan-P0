@@ -19,6 +19,8 @@ namespace ShopDL{
         //Inventory AddInventory(Inventory i_inven);
         List<Inventory> GetAllInventory();
         Inventory GetAnInventory(int id);
+        Inventory RestockInventory(int p_prodId, int s_storeId, int amount);
+
 
         
     }

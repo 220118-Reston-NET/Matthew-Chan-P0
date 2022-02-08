@@ -305,3 +305,38 @@
 2022-02-06 21:15:58.497 -08:00 [INF] Displaying MainMenu to user
 2022-02-06 21:16:19.028 -08:00 [INF] Displaying MainMenu to user
 2022-02-06 21:16:20.681 -08:00 [INF] Exiting application
+2022-02-07 12:34:19.811 -08:00 [INF] Exiting application
+2022-02-07 18:20:09.919 -08:00 [INF] Exiting application
+2022-02-07 18:22:10.576 -08:00 [INF] Replenishing the Inventory
+2022-02-07 18:22:14.563 -08:00 [INF] Replenishing the Inventory
+2022-02-07 18:22:17.056 -08:00 [INF] Replenishing the Inventory
+2022-02-07 18:22:21.905 -08:00 [INF] Replenishing the Inventory
+2022-02-07 18:22:40.946 -08:00 [INF] Displaying MainMenu to user
+2022-02-07 18:46:17.326 -08:00 [INF] Exiting application
+2022-02-07 18:47:18.972 -08:00 [INF] Replenishing the Inventory
+2022-02-07 18:47:21.352 -08:00 [INF] Replenishing the Inventory
+2022-02-07 18:47:28.853 -08:00 [INF] Replenishing the Inventory
+2022-02-07 18:47:39.184 -08:00 [INF] Replenishing the Inventory
+2022-02-07 18:48:46.405 -08:00 [INF] Displaying MainMenu to user
+2022-02-07 18:48:47.332 -08:00 [INF] Exiting application
+2022-02-07 18:49:05.566 -08:00 [INF] Replenishing the Inventory
+2022-02-07 18:49:08.008 -08:00 [INF] Replenishing the Inventory
+2022-02-07 18:49:09.524 -08:00 [INF] Replenishing the Inventory
+2022-02-07 18:49:12.356 -08:00 [INF] Replenishing the Inventory
+2022-02-07 18:49:15.137 -08:00 [INF] Displaying MainMenu to user
+2022-02-07 18:50:19.532 -08:00 [INF] Displaying MainMenu to user
+2022-02-07 18:50:20.531 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-07 18:50:25.460 -08:00 [INF] Displaying MainMenu to user
+2022-02-07 18:50:27.180 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-07 18:52:09.830 -08:00 [INF] Displaying MainMenu to user
+2022-02-07 18:52:10.923 -08:00 [INF] Exiting application
+2022-02-07 18:52:21.600 -08:00 [INF] Displaying SearchPokemon Menu to user
+2022-02-07 18:52:38.475 -08:00 [INF] Displaying MainMenu to user
+2022-02-07 18:52:41.147 -08:00 [INF] Adding stores
+2022-02-07 18:52:44.074 -08:00 [INF] Adding stores
+2022-02-07 18:52:50.338 -08:00 [INF] Displaying MainMenu to user
+2022-02-07 18:53:05.829 -08:00 [INF] Searching the inventory
+2022-02-07 18:53:18.306 -08:00 [INF] Displaying MainMenu to user
+2022-02-07 18:53:27.802 -08:00 [INF] Replenishing the Inventory
+2022-02-07 18:53:33.738 -08:00 [INF] Displaying MainMenu to user
+2022-02-07 18:53:36.554 -08:00 [INF] Exiting application

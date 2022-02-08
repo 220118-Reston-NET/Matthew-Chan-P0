@@ -37,6 +37,8 @@ namespace ShopBL
 
         void printProductsInInventory(Inventory inv);
 
+        void RestockInventory(int p_prodId, int s_storeId, int amount);
+
         bool CheckIfEmpty(List<StoreFront> listOfCust);
     }
 

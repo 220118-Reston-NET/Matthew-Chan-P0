@@ -28,6 +28,10 @@ while(repeat){
 
     
     switch(ans){ 
+        case "Restock":
+            Log.Information("Replenishing the Inventory");
+            menu = new RestockMenu(new StoreFrontBL(new SQLStoreFrontRepository(_connectionString)));
+            break; 
         case "SearchInventory":
             Log.Information("Searching the inventory");
             menu = new SearchInventoryMenu(new StoreFrontBL(new SQLStoreFrontRepository(_connectionString)));

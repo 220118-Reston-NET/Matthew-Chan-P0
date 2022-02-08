@@ -9,6 +9,7 @@ public class StoreFront{
     // need some kind of unique store ID
     
     public StoreFront(){
+        storeId = -1;
         Name = "N/A";
         Address = "9001 Utopia Circle";
         Inv = new Inventory();

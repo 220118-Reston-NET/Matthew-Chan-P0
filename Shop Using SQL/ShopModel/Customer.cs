@@ -90,6 +90,6 @@ public class Customer{
         PhoneNumber = "123-456-7890";
     }
     public override string ToString(){
-        return $"Name: {Name}\nAge: {Age}\nAddress: {Address}\nEmail: {Email}\nPhoneNumber: {PhoneNumber}";
+        return $"Name: {Name}\nUnique Customer ID: {custId}\nAge: {Age}\nAddress: {Address}\nEmail: {Email}\nPhoneNumber: {PhoneNumber}";
     }
 }

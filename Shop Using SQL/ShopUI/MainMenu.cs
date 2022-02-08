@@ -34,6 +34,8 @@ namespace ShopUI
                     return "SearchStoreFront";
                 case "4":
                     return "SearchInventory";
+                case "6":
+                    return "Restock";
                 case "7":
                     return "AddStore"; 
                 default:

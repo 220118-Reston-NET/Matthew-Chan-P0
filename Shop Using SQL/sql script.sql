@@ -104,13 +104,13 @@ select * from Customer
 
 -----------------------------------------------------------------------------------
 
-SELECT o.orderId, p.prodName, p.prodPrice, p.prodDesc, p.prodAgeRestriction,  li.itemQuantity, sf.storeAddress
+SELECT o.orderId, p.prodId, p.prodName, p.prodPrice, p.prodDesc, p.prodAgeRestriction,  li.itemQuantity, sf.storeAddress
 FROM Customer c  
 INNER JOIN Orders o ON c.custId = o.custId 
 INNER JOIN OrderToLineItem ol ON o.orderId = ol.orderId 
 INNER JOIN LineItem li on ol.lineItemId = li.lineItemId 
 INNER JOIN Product p ON p.prodId  = li.prodId  
-INNER JOIN StoreFront sf ON o.storeId = sf.storeId 
+INNER JOIN StoreFront sf ON o.storeId = sf.storeId
 WHERE c.custId = 1;
 
 
@@ -118,10 +118,23 @@ SELECT * FROM Inventory i
 Inner Join Product p ON i.prodId = p.prodId 
 
 
-select * from Inventory 
+select prodId  from Inventory 
 Inner Join Product p ON i.prodId = p.prodId
 where i.storeId = 1
 
+
+
+select i.prodQuantitiy from Inventory i
+WHERE inventory.storeId = 1
+AND inventory.prodId = 1;
+
+
+UPDATE Inventory
+SET prodQuantitiy = 50 + 5
+WHERE inventory.storeId = 1
+AND inventory.prodId = 1;
+
+select * from Inventory 
 
 -------------------------------------------------------------------------------------
 

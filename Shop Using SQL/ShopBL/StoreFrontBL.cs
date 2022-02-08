@@ -66,7 +66,13 @@ namespace ShopBL{
             }
         }
     
-        
+        public void RestockInventory(int p_prodId, int s_storeId, int amount){
+            // need to check if prod and store and amount are valid
+            
+            //now update inventory
+            _repo.RestockInventory(p_prodId, s_storeId, amount);
+        }
+
 
         /*public List<Product> GetProductsFromShopId (int sId) {
             List<Products> = _
