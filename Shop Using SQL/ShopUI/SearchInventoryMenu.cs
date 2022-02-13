@@ -14,6 +14,11 @@ namespace ShopUI
 
         public void Display()
         {
+            Console.WriteLine("Here are all the shops:");
+            List<StoreFront> listOfStoreFronts = _storeBL.GetAllStoreFronts();
+            for(int i = 0; i < listOfStoreFronts.Count; i++){
+                Console.WriteLine(listOfStoreFronts[i].Name);
+            }
             Console.WriteLine("Please select the shop(by name)");
         }
 
@@ -27,14 +32,12 @@ namespace ShopUI
                 Console.WriteLine("We could not find a store from that name. Please try another method");
                 Console.WriteLine("Please press Enter to continue");
                 Console.ReadLine();
-                return "SearchStoreFront";
+                return "SearchInventory";
             }
 
             
             Console.WriteLine("The store " + listOfStoreFromName[0].Name + " was found.");
-            Console.WriteLine("Please press Enter to continue");
-            Console.ReadLine();
-
+            
             Inventory storeInventory = _storeBL.GetSpecificInventory(listOfStoreFromName[0].storeId);
 
             _storeBL.printProductsInInventory(storeInventory);            

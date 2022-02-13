@@ -23,7 +23,7 @@ namespace ShopUI
             Console.WriteLine("Enter StoreFront information");
             Console.WriteLine("[4] Name - " + _newStore.Name );
             Console.WriteLine("[3] Address - " + _newStore.Address );
-            Console.WriteLine("[2] Products:" + _newStore.Inv);
+            Console.WriteLine("[2] Products: " + _newStore.Inv);
             Console.WriteLine("[1] Save");
             Console.WriteLine("[0] Go Back");
         }

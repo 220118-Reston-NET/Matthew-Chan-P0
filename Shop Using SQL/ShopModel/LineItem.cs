@@ -9,8 +9,20 @@ public class LineItem{
         Products = new Product();
         Quantity = 0;
     }
+
+    public LineItem(Product p, int q){
+        lineItemId = -1;
+        Products = p;
+        Quantity = q;
+    }
+
+    public LineItem(int lId, Product p, int q){
+        lineItemId = lId;
+        Products = p;
+        Quantity = q;
+    }
     
     public override string ToString(){
-        return $"Product Name: {Products}\nQuantity: {Quantity}";
+        return $"{Products}\nQuantity: {Quantity}";
     }
 }

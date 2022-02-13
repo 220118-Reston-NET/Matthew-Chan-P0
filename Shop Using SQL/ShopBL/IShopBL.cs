@@ -18,26 +18,29 @@ namespace ShopBL
 
     
     
-    public interface IProductBL {
+/*    public interface IProductBL {
         Product AddProduct (Product p_prod);
 
         List<Product> SearchProduct(string p_name);
         List<Product> GetAllCustomer();
     }
-
+*/
     public interface IStoreFrontBL{
         StoreFront AddStoreFront (StoreFront s_store);
         List<StoreFront> SearchStoreFrontName(string s_store);
         List<StoreFront> GetAllStoreFronts();
         List<StoreFront> SearchStoreFrontProducts(string s_product);
 
-        //
+        List<Product> GetAllProducts();
         Inventory GetSpecificInventory(int id);
         //List<Product> GetProductsFromShopId(int id);
+        List<StoreFront> checkStoresForAProduct(int prodId);
 
         void printProductsInInventory(Inventory inv);
 
         void RestockInventory(int p_prodId, int s_storeId, int amount);
+
+        Inventory AddItemToInventory(int p_prodId, int s_storeId, int amount);
 
         bool CheckIfEmpty(List<StoreFront> listOfCust);
     }
@@ -50,5 +53,20 @@ namespace ShopBL
         bool CheckIfEmpty(List<StoreFront> listOfCust);
     } */
 
+    public interface IProductBL{
+        Product AddProduct(Product prod);
+        List<Product> GetAllProducts();
+    }
+
+    public interface IOrderBL{
+        Order AddOrder(Order ord, int custID, int storeID);
+
+        Product ProductIdToProduct(int prodId);
+
+        List<Order> GetAllOrder();
+        List<Order> GetACustomerOrder( int cId);
+        List<Order> GetAShopOrder( int sId);    
+
+    }
     
 }

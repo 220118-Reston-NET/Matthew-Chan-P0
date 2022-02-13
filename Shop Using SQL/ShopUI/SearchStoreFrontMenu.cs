@@ -26,30 +26,44 @@ namespace ShopUI
             switch (userInput)
             {
                 case "0":
-                    return "MainMenu";
-                /*case "1":
+                    return "MainMenu";  
+                case "1":
+                    List<Product> listOfStoreFrontProducts = _storeBL.GetAllProducts();
+                    Console.WriteLine("Here are the list of products: ");
                     //Logic to grab user input
-                    Console.WriteLine("Please enter a product");
-                    string productName = Console.ReadLine();
-
-                    //Logic to display the result
-                    List<StoreFront> listOfStoreFromName = _storeBL.SearchStoreFrontProducts(productName);
+                    for(int i = 0; i < listOfStoreFrontProducts.Count; i++){
+                        Console.WriteLine(listOfStoreFrontProducts[i].prodId + " " + listOfStoreFrontProducts[i].Name);
+                    }
+                    try{
+                        Console.WriteLine("Please enter the number of the product product.");
+                        int productId = Convert.ToInt32(Console.ReadLine());
                     
-                    if(_storeBL.CheckIfEmpty(listOfStoreFromName) == true){
-                        Console.WriteLine("We could not find a store from that name. Please try another method");
+                        //Logic to display the result
+                        List<StoreFront> listOfStoreFromNameFromProduct = _storeBL.checkStoresForAProduct(productId);
+                        
+                        if(_storeBL.CheckIfEmpty(listOfStoreFromNameFromProduct) == true){
+                            Console.WriteLine("We could not find a store with that product. Please try another method");
+                            Console.WriteLine("Please press Enter to continue");
+                            Console.ReadLine();
+                            return "SearchStoreFront";
+                        }
+                        foreach (var item in listOfStoreFromNameFromProduct)
+                        {
+                            Console.WriteLine("================");
+                            Console.WriteLine(item);
+                        } 
                         Console.WriteLine("Please press Enter to continue");
+                        Console.ReadLine();
+
+                        return "MainMenu";
+                    }
+                    catch(FormatException){
+                        Console.WriteLine("Please input a valid ID.");
+                        Console.WriteLine("Please press enter to continue.");
                         Console.ReadLine();
                         return "SearchStoreFront";
                     }
-                    foreach (var item in listOfStoreFromName)
-                    {
-                        Console.WriteLine("================");
-                        Console.WriteLine(item);
-                    } 
-                    Console.WriteLine("Please press Enter to continue");
-                    Console.ReadLine();
-
-                    return "MainMenu"; */
+                     
                 case "2":
                     //Logic to grab user input
                     Console.WriteLine("Please enter a name");

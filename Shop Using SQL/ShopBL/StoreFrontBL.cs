@@ -27,6 +27,12 @@ namespace ShopBL{
         public List<StoreFront> GetAllStoreFronts(){
             return _repo.GetAllStoreFront();
         }
+
+        public List<Product> GetAllProducts(){
+            return _repo.GetAllProducts();
+        }
+
+
         
         public List<StoreFront> SearchStoreFrontName(string s_name){
             List<StoreFront> listOfStoreFronts = _repo.GetAllStoreFront();
@@ -46,6 +52,20 @@ namespace ShopBL{
                         //.ToList()); 
         }
         
+        public List<StoreFront> checkStoresForAProduct(int pId){
+            List<StoreFront> listOfStoreFronts = _repo.GetAllStoreFront();
+            List<StoreFront> listOfStoreFrontsWithProduct = new List<StoreFront>{};
+
+            for(int i = 0; i < listOfStoreFronts.Count; i++){
+                for(int j = 0; j < listOfStoreFronts[i].Inv.Products.Count; j++){
+                    if(listOfStoreFronts[i].Inv.Products[j].prodId == pId){
+                        listOfStoreFrontsWithProduct.Add(listOfStoreFronts[i]);
+                    }
+                }
+            }
+            return listOfStoreFrontsWithProduct;
+        }
+
         public bool CheckIfEmpty(List<StoreFront> listOfStores){
             if(listOfStores.Any() == false){
                 return true;
@@ -73,7 +93,9 @@ namespace ShopBL{
             _repo.RestockInventory(p_prodId, s_storeId, amount);
         }
 
-
+        public Inventory AddItemToInventory(int p_prodId, int s_storeId, int amount){
+            return _repo.AddItemToInventory(p_prodId, s_storeId, amount);
+        }
         /*public List<Product> GetProductsFromShopId (int sId) {
             List<Products> = _
         }*/

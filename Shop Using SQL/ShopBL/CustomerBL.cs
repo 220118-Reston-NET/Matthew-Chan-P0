@@ -1,7 +1,7 @@
 using ShopDL;
 using ShopModel;
 
-
+// verification for entering name, phone, and email
 namespace ShopBL{
     public class CustomerBL: ICustomerBL {
         // Dependency Injection Pattern

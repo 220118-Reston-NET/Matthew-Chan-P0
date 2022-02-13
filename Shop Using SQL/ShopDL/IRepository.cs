@@ -20,14 +20,31 @@ namespace ShopDL{
         List<Inventory> GetAllInventory();
         Inventory GetAnInventory(int id);
         Inventory RestockInventory(int p_prodId, int s_storeId, int amount);
+        Inventory AddItemToInventory(int p_prodId, int s_storeId, int amount);
+        
+
+        List<Product> GetAllProducts();
 
 
         
     }
     public interface IOrderRepository{
-        Order AddOrder(Order o_order);
+        Order AddOrder(Order o_order, int custId, int storeId);
         List<Order> GetAllOrder();
+        Product ProductIdToProduct(int prodId);
+
+        List<Order> GetACustomerOrder( int cId);    
+
+        List<Order> GetAShopOrder( int sId);
+
+
     }
 
+    public interface IProductRepository{
+        Product AddProduct(Product prod);
+        List<Product> GetAllProducts();
+        //List<string> GetStoreFrontsThatContainProduct(int prodId);
+        Product ProductIdToProduct(int prodId);
+    } 
 
 }

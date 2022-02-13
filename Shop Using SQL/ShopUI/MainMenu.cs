@@ -11,7 +11,7 @@ namespace ShopUI
             Console.WriteLine("[2] Find a Customer");
             Console.WriteLine("[3] Search Inventory");
             Console.WriteLine("[4] View Inventory");
-            Console.WriteLine("[5] Place Order");
+            Console.WriteLine("[5] Place or View Orders");
             Console.WriteLine("[6] Replenish Inventory");
             Console.WriteLine("[7] Creates stores");
             Console.WriteLine("[0] Exit");
@@ -34,6 +34,8 @@ namespace ShopUI
                     return "SearchStoreFront";
                 case "4":
                     return "SearchInventory";
+                case "5":
+                    return "PlaceOrder";
                 case "6":
                     return "Restock";
                 case "7":

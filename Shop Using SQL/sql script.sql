@@ -87,6 +87,9 @@ values(1, 5),
 	(4,1)
 
 
+SELECT * FROM LineItem 
+ORDER BY id DESC 
+LIMIT 1
 
 insert into Orders 
 values (1,1),
@@ -114,6 +117,7 @@ INNER JOIN StoreFront sf ON o.storeId = sf.storeId
 WHERE c.custId = 1;
 
 
+
 SELECT * FROM Inventory i 
 Inner Join Product p ON i.prodId = p.prodId 
 
@@ -135,6 +139,39 @@ WHERE inventory.storeId = 1
 AND inventory.prodId = 1;
 
 select * from Inventory 
+
+
+
+
+SELECT i.inventoryId  FROM Inventory i 
+ORDER BY i.inventoryId  DESC 
+OFFSET 0 ROWS FETCH FIRST 1 ROW ONLY
+
+
+
+SELECT * FROM Inventory i  
+ORDER BY i.inventoryId DESC 
+LIMIT 10
+)Var1
+ORDER BY id ASC;
+
+
+select top(5) i.inventoryId from Inventory i 
+order by i.inventoryId desc
+order by i.inventoryId ASC 
+
+insert into LineItem
+
+
+SELECT o.orderId, li.lineItemId, p.prodId, p.prodName, p.prodPrice, p.prodDesc, p.prodAgeRestriction,  li.itemQuantity, sf.storeAddress
+FROM Customer c     
+INNER JOIN Orders o ON c.custId = o.custId 
+INNER JOIN OrderToLineItem ol ON o.orderId = ol.orderId 
+INNER JOIN LineItem li on ol.lineItemId = li.lineItemId 
+INNER JOIN Product p ON p.prodId  = li.prodId  
+INNER JOIN StoreFront sf ON o.storeId = sf.storeId
+where sf.storeId = 1
+
 
 -------------------------------------------------------------------------------------
 

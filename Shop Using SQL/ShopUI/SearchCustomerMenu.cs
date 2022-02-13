@@ -33,6 +33,13 @@ namespace ShopUI
                 try{
                     int custId = Convert.ToInt32(Console.ReadLine());
                     List<Customer>listOfCustomer = _custBL.SearchCustomerFromCustId(custId);
+
+                    if(_custBL.CheckIfEmpty(listOfCustomer) == true){
+                        Console.WriteLine("We could not find a customer from that value. Please try another method");
+                        Console.WriteLine("Please press Enter to continue");
+                        Console.ReadLine();
+                        return "SearchCustomer";
+                    }
                     foreach(var item in listOfCustomer){
                         Console.WriteLine("=========");
                         Console.WriteLine(item);
@@ -81,6 +88,12 @@ namespace ShopUI
                     string email = Console.ReadLine();
                     //Logic to display the result
                     List<Customer> listOfCustFromEMail = _custBL.SearchCustomerFromEMail(email);
+                    if(listOfCustFromEMail.Count > 1){
+                        Console.WriteLine("We have multiple customers with that email in our database. please select another identifier.");
+                        Console.WriteLine("Please press Enter to continue");
+                        Console.ReadLine();
+                        return "SearchCustomer";
+                    }
                     foreach (var item in listOfCustFromEMail)
                     {
                         Console.WriteLine("================");
@@ -107,6 +120,12 @@ namespace ShopUI
                     
                     if(_custBL.CheckIfEmpty(listOfCustFromName) == true){
                         Console.WriteLine("We could not find a customer from that Name. Please try another method");
+                        Console.WriteLine("Please press Enter to continue");
+                        Console.ReadLine();
+                        return "SearchCustomer";
+                    }
+                    if(listOfCustFromName.Count > 1){
+                        Console.WriteLine("We have multiple customers with that name in our database. please select another identifier.");
                         Console.WriteLine("Please press Enter to continue");
                         Console.ReadLine();
                         return "SearchCustomer";

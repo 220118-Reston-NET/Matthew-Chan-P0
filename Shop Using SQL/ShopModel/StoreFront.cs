@@ -19,6 +19,6 @@ public class StoreFront{
     public override string ToString(){
         /*string productString = string.Join( "\n", Products); */
         string OrderString = string.Join( ",", Orders);
-        return $"Name: {Name}\nPrice: {Address}\n  ???  \nOrders: {OrderString}";
+        return $"Name: {Name}\nStore Id{storeId}\nAddress: {Address}";
     }
 }

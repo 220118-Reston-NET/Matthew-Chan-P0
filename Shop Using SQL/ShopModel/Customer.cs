@@ -1,4 +1,4 @@
-namespace ShopModel;
+namespace ShopModel; 
 public class Customer{
     /*
     public string _name;

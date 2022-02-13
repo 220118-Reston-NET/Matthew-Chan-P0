@@ -31,6 +31,6 @@ public class Product{
         Age_Restriction = productAgeRestriction;
     }
     public override string ToString(){
-        return $"Name: {Name}\nPrice: {Price}\nDescription: {Desc}\nAge Restriction: {Age_Restriction}";
+        return $"Product Name: {Name}\nPrice: {Price}\nDescription: {Desc}\nAge Restriction: {Age_Restriction}";
     }
 }

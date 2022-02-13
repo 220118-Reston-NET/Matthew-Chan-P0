@@ -28,6 +28,10 @@ while(repeat){
 
     
     switch(ans){ 
+        case "PlaceOrder":
+            Log.Information("Placing an Order"); 
+            menu = new OrderMenu(new OrderBL(new SQLOrderRepository(_connectionString)));
+            break;
         case "Restock":
             Log.Information("Replenishing the Inventory");
             menu = new RestockMenu(new StoreFrontBL(new SQLStoreFrontRepository(_connectionString)));
@@ -45,7 +49,7 @@ while(repeat){
             menu = new AddStoreFrontMenu(new StoreFrontBL(new SQLStoreFrontRepository(_connectionString)));
             break;
         case "SearchCustomer":
-            Log.Information("Displaying SearchPokemon Menu to user");
+            Log.Information("Displaying SearchCustomer Menu to user");
             menu = new SearchCustomerMenu(new CustomerBL(new SQLCustomerRepository(_connectionString)));
             break; 
         case "AddCustomer":

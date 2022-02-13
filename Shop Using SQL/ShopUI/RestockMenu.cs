@@ -27,6 +27,7 @@ namespace ShopUI
             Console.WriteLine("[3] Product ID - " + productId );
             Console.WriteLine("[2] Amount:" + amount);
             Console.WriteLine("[1] Update");
+            Console.WriteLine("[5] Add");
             Console.WriteLine("[0] Go Back");
         }
 
@@ -63,6 +64,18 @@ namespace ShopUI
                     Console.WriteLine("Please enter the Store ID!");
                     storeId = Convert.ToInt32(Console.ReadLine());
                     return "Restock";
+                case "5":
+                    try
+                    {
+                        _storeBL.AddItemToInventory(productId, storeId, amount);
+                    }
+                    catch (System.Exception exc)
+                    {
+                        Console.WriteLine(exc.Message);
+                        Console.WriteLine("Please press Enter to continue");
+                        Console.ReadLine();
+                    }
+                    return "MainMenu";
                 default:
                     Console.WriteLine("Please input a valid response");
                     Console.WriteLine("Please press Enter to continue");

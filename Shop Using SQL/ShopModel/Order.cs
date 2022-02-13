@@ -1,8 +1,8 @@
 namespace ShopModel;
 public class Order{
     public int orderNumber { get; set; }
-    List<LineItem> LineItems { get; set; }
-    List<string> StoreFrontLocation {get; set;}
+    public List<LineItem> LineItems { get; set; }
+    public List<string> StoreFrontLocation {get; set;}
     int totalPrice { get; set; }
     public Order(){
         orderNumber = 0;
@@ -22,7 +22,13 @@ public class Order{
         string lineItemString = string.Join( "\n", LineItems);
         string storeFrontLocationString = string.Join( "\n", StoreFrontLocation);
         //string totalPrice = string.Join( "\n", totalPrice);
-        return $"Line Items: {lineItemString}\nStore Front Locations: {storeFrontLocationString}\nTotal Price: ";
+        return $"Order Number: {orderNumber}\nLine Items: {lineItemString}\nStore Front Locations: {storeFrontLocationString[0]}\nTotal Price: {totalPrice}";
+    }
+
+    public void AddItemToOrder(LineItem lItem, string sfLoc){
+        LineItems.Add(lItem);
+        StoreFrontLocation.Add(sfLoc);
+        totalPrice += lItem.Products.Price;
     }
 }
 

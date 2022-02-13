@@ -181,7 +181,8 @@ namespace ShopDL
                         //Zero-based column index
                         storeId = reader.GetInt32(0),
                         Name = reader.GetString(1), 
-                        Address = reader.GetString(2)
+                        Address = reader.GetString(2),
+                        Inv = GetAnInventory(reader.GetInt32(0))
                     });
                 }
             } 
@@ -326,6 +327,76 @@ namespace ShopDL
             return inven;
         }
 
+        public Inventory AddItemToInventory(int p_prodId, int s_storeId, int amount)
+        {
+            string sqlQuery = @"insert into inventory 
+                            values(@prodId, @prodQuantity, @storeId)";
+
+            //using block is different from our normal using statement
+            //It is used to automatically close any resource you stated inside of the parenthesis
+            //If an exception occurs, it will still automatically close any resources
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                //Opens the connection to the database
+                con.Open();
+
+                //SqlCommand class is a class specialized in executing SQL statements
+                //Command will how the sqlQuery that will execute on the currently connection we have in the con object
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                //command.Parameters.AddWithValue("@custId", c_cust.custId);
+                command.Parameters.AddWithValue("@prodId", p_prodId);
+                command.Parameters.AddWithValue("@prodQuantity", amount);
+                command.Parameters.AddWithValue("@storeId", s_storeId);
+
+                //Executes the SQL statement
+                command.ExecuteNonQuery();
+            }
+
+
+
+
+
+
+            Inventory inven = new Inventory();
+            int IId;
+            sqlQuery = @"SELECT i.inventoryId  FROM Inventory i 
+                        ORDER BY i.inventoryId  DESC 
+                        OFFSET 0 ROWS FETCH FIRST 1 ROW ONLY";
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+                //Create command object that has our sqlQuery and con object
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                SqlDataReader reader = command.ExecuteReader();
+                
+                
+                while (reader.Read())
+                {
+                    IId = reader.GetInt32(0);
+                }
+            } 
+
+            return GetAnInventory(s_storeId);
+
+
+        }
+
+        public List<Product> GetAllProducts(){
+            List<Product> listOfProducts = new List<Product>();
+
+            string sqlQuery = @"select * from Product";
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    listOfProducts.Add(new Product(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2), reader.GetString(3), reader.GetInt32(4))); 
+                }   
+            }
+            return listOfProducts;
+        }
 
     }
     
@@ -333,17 +404,17 @@ namespace ShopDL
     public class SQLOrderRepository : IOrderRepository 
     {
         private readonly string _connectionStrings;
-        public SQLCustomerRepository(string p_connectionStrings)
+        public SQLOrderRepository(string p_connectionStrings)
         {
             _connectionStrings = p_connectionStrings;
         }
 
-        public Order AddOrder(Order o_order, int custId)
-        {
-            string sqlQuery = @"insert into LineItem";
+
+        /* 
+        string sqlQuery = @"insert into Product";
 
             using (SqlConnection con = new SqlConnection(_connectionStrings))
-            {
+            {   
                 //Opens the connection to the database
                 con.Open();
 
@@ -362,75 +433,131 @@ namespace ShopDL
                 //Executes the SQL statement
                 command.ExecuteNonQuery();
             }
+        */    
 
-
-            sqlQuery = @"insert into LineItem";
+        public Order AddOrder(Order o_order, int custId, int storeId)
+        { 
+            List<Order> OrderList = new List<Order>{};
+            string sqlQuery = @"insert into LineItem
+                            values(@prodId, @itemQuantity)";
+            int numberOfItems = o_order.LineItems.Count;
 
             using (SqlConnection con = new SqlConnection(_connectionStrings))
             {
                 con.Open();
-                
-                for(int i = 0; i < o_order.listOfOrders.Count; i++){
-                    SqlCommand command = new SqlCommand(sqlQuery, con);
-                    command.Parameters.AddWithValue("@prodId", o_order.lineItems[i].Products.prodId);//??????????????????
-                    command.Parameters.AddWithValue("@prodAgeRestriction", o_order.lineItems[i].quantity);
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+
+                for(int i = 0; i < numberOfItems; i++){
+                    
+                    command.Parameters.AddWithValue("@prodId", o_order.LineItems[i].Products.prodId); //??????????????????
+                    command.Parameters.AddWithValue("@itemQuantity", o_order.LineItems[i].Quantity);
                 }
 
                 command.ExecuteNonQuery();
             }
 
+
+
+            List<int> IId = new List<int>{};
+            sqlQuery = @"SELECT top(@numOfOrders) * FROM LineItem li
+                    ORDER BY li.lineItemid DESC";
             //probably need a way to read the line items to get the lineitemid
-            sqlQuery = @"insert into OrderToLineItem";
+            
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+                //Create command object that has our sqlQuery and con object
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@numOfOrders", numberOfItems);
+
+                SqlDataReader reader = command.ExecuteReader();
+                
+                
+                while (reader.Read())
+                {
+                    IId.Add(reader.GetInt32(0));
+                }
+            }
+            
+            
+            
+            
+            sqlQuery = @"insert into Orders
+                    values(@custId, @storeId)";
 
             using (SqlConnection con = new SqlConnection(_connectionStrings))
             {
                 con.Open();
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+
+                for(int i = 0; i < numberOfItems; i++){
+                    
+                    command.Parameters.AddWithValue("@custId", custId);
+                    command.Parameters.AddWithValue("@storeId", storeId);
+                }
+
+                command.ExecuteNonQuery();
+            }
+
+            
+            List<int> oId = new List<int>{};
+            sqlQuery = @"SELECT top(@numOfOrders) * FROM Orders o ORDER BY o.orderId DESC";
+            //probably need a way to read the line items to get the lineitemid
+            
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+                //Create command object that has our sqlQuery and con object
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@numOfOrders", numberOfItems);
+
+                SqlDataReader reader = command.ExecuteReader();
                 
-                for(int i = 0; i < o_order.listOfOrders.Count; i++){
-                    SqlCommand command = new SqlCommand(sqlQuery, con);
-                    command.Parameters.AddWithValue("@orderId", o_order.orderNumber);
-                    command.Parameters.AddWithValue("@lineItemId", o_order.lineItems[i].lineItemId);
+                
+                while (reader.Read())
+                {
+                    oId.Add(reader.GetInt32(0));
+                }
+            }
+
+
+
+
+            
+            sqlQuery = @"insert into OrderToLineItem
+                    values(@orderId, @lineItemId)";
+
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                for(int i = 0; i < numberOfItems; i++){
+                    command.Parameters.AddWithValue("@orderId", oId[numberOfItems - i - 1]);
+                    command.Parameters.AddWithValue("@lineItemId", IId[numberOfItems - i - 1]);
                 }
 
                 command.ExecuteNonQuery();
             }
             
-
-
-            sqlQuery = @"insert into Orders";
-
-            using (SqlConnection con = new SqlConnection(_connectionStrings))
-            {
-                con.Open();
-                
-                for(int i = 0; i < o_order.listOfOrders.Count; i++){
-                    SqlCommand command = new SqlCommand(sqlQuery, con);
-                    command.Parameters.AddWithValue("@orderId", o_order.orderNumber);
-                    command.Parameters.AddWithValue("@custId", custId);
-                }
-
-                command.ExecuteNonQuery();
-            }
-
             return o_order;
-        } // ??????????????????????????
+        } 
 
-    public int orderNumber { get; set; }
-    List<LineItem> LineItems { get; set; }
-    List<string> StoreFrontLocation {get; set;}
-    int totalPrice { get; set; }
-        public List<Order> GetAllOrder()
-        {
-            List<Order> listOfOrder = new List<Order>();
+
+
+
+  
+        public List<Order> GetAllOrder()    
+        {   
+            List<Order> listOfOrder = new List<Order>();    
 
             string sqlQuery = @"SELECT o.orderId, li.lineItemId, p.prodId, p.prodName, p.prodPrice, p.prodDesc, p.prodAgeRestriction,  li.itemQuantity, sf.storeAddress
-                            FROM Customer c  
+                            FROM Customer c     
                             INNER JOIN Orders o ON c.custId = o.custId 
                             INNER JOIN OrderToLineItem ol ON o.orderId = ol.orderId 
                             INNER JOIN LineItem li on ol.lineItemId = li.lineItemId 
                             INNER JOIN Product p ON p.prodId  = li.prodId  
-                            INNER JOIN StoreFront sf ON o.storeId = sf.storeId
-                            where c.custId = @custId";
+                            INNER JOIN StoreFront sf ON o.storeId = sf.storeId";
+//                            where c.custId = @custId";
             using (SqlConnection con = new SqlConnection(_connectionStrings))
             {
                 //Opens connection to the database
@@ -446,21 +573,23 @@ namespace ShopDL
                 int oId = -1;
                 List<LineItem> listOfLineItems = new List<LineItem>();
                 List<string> listOfStoreFrontLocation = new List<string>();
+                int tPrice = 0;
 
                 while (reader.Read())
                 {
-                    if(oId != -1 && oId != read.GetInt32(0)){
+                    if(oId != -1 && oId != reader.GetInt32(0)){
                         listOfOrder.Add(
+                            new Order(
                             oId,
                             listOfLineItems,
                             listOfStoreFrontLocation,
                             tPrice
-                        );
+                        ));
                         listOfLineItems.Clear();
                         listOfStoreFrontLocation.Clear();
                         tPrice = 0;
                     }
-                    oId = read.GetInt32(0);
+                    oId = reader.GetInt32(0);
                     listOfLineItems.Add(
                         new LineItem(
                             reader.GetInt32(1),
@@ -472,20 +601,242 @@ namespace ShopDL
                                 reader.GetInt32(6)
                             ),
                             reader.GetInt32(7)
-
-                            public int lineItemId {get; set; }
-                            public Product Products { get; set; }
-                            public int Quantity { get; set; }
                         )
                     );
-                    listOfStoreFrontLocation.Add(GetString(8));
-                    totalPrice += GetInt32.(4);
+                    listOfStoreFrontLocation.Add(reader.GetString(8));
+                    tPrice += reader.GetInt32(4);
                 }
             } 
 
             return listOfOrder;
         }
+
+        public List<Order> GetACustomerOrder( int cId)    
+        {   
+            List<Order> listOfOrder = new List<Order>();    
+
+            string sqlQuery = @"SELECT o.orderId, li.lineItemId, p.prodId, p.prodName, p.prodPrice, p.prodDesc, p.prodAgeRestriction,  li.itemQuantity, sf.storeAddress
+                            FROM Customer c     
+                            INNER JOIN Orders o ON c.custId = o.custId 
+                            INNER JOIN OrderToLineItem ol ON o.orderId = ol.orderId 
+                            INNER JOIN LineItem li on ol.lineItemId = li.lineItemId 
+                            INNER JOIN Product p ON p.prodId  = li.prodId  
+                            INNER JOIN StoreFront sf ON o.storeId = sf.storeId
+                            where c.custId = @custId";
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                //Opens connection to the database
+                con.Open();
+                //Create command object that has our sqlQuery and con object
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@custId", cId);
+                //SqlDataReader is a class specialized in reading outputs that came from a sql statement
+                //Usually this outputs are in a form of a table and keep that in mind
+                SqlDataReader reader = command.ExecuteReader();
+                //Read() methods checks if you have more rows to go through
+                //If there is another row = true, if not = false
+
+                int oId = -1;
+                List<LineItem> listOfLineItems = new List<LineItem>();
+                List<string> listOfStoreFrontLocation = new List<string>();
+                int tPrice = 0;
+
+                while (reader.Read())
+                {
+                    oId = reader.GetInt32(0);
+                    listOfLineItems.Add(
+                        new LineItem(
+                            reader.GetInt32(1),
+                            new Product(
+                                reader.GetInt32(2),
+                                reader.GetString(3),
+                                reader.GetInt32(4),
+                                reader.GetString(5),
+                                reader.GetInt32(6)
+                            ),
+                            reader.GetInt32(7)
+                        )
+                    );
+                    listOfStoreFrontLocation.Add(reader.GetString(8));
+                    tPrice += reader.GetInt32(4);
+
+                    listOfOrder.Add(
+                        new Order(
+                        oId,
+                        listOfLineItems,
+                        listOfStoreFrontLocation,
+                        tPrice
+                    ));
+                    
+                    
+                }
+            } 
+
+            return listOfOrder;
+        }
+
+
+        public List<Order> GetAShopOrder( int sId)    
+        {   
+            List<Order> listOfOrder = new List<Order>();    
+
+            string sqlQuery = @"SELECT o.orderId, li.lineItemId, p.prodId, p.prodName, p.prodPrice, p.prodDesc, p.prodAgeRestriction,  li.itemQuantity, sf.storeAddress
+                            FROM Customer c     
+                            INNER JOIN Orders o ON c.custId = o.custId 
+                            INNER JOIN OrderToLineItem ol ON o.orderId = ol.orderId 
+                            INNER JOIN LineItem li on ol.lineItemId = li.lineItemId 
+                            INNER JOIN Product p ON p.prodId  = li.prodId  
+                            INNER JOIN StoreFront sf ON o.storeId = sf.storeId
+                            where c.custId = @shopId";
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                //Opens connection to the database
+                con.Open();
+                //Create command object that has our sqlQuery and con object
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@shopId", sId);
+                //SqlDataReader is a class specialized in reading outputs that came from a sql statement
+                //Usually this outputs are in a form of a table and keep that in mind
+                SqlDataReader reader = command.ExecuteReader();
+                //Read() methods checks if you have more rows to go through
+                //If there is another row = true, if not = false
+
+                int shopId = -1;
+                List<LineItem> listOfLineItems = new List<LineItem>();
+                List<string> listOfStoreFrontLocation = new List<string>();
+                int tPrice = 0;
+
+                while (reader.Read())
+                {
+                    shopId = reader.GetInt32(0);
+                    listOfLineItems.Add(
+                        new LineItem(
+                            reader.GetInt32(1),
+                            new Product(
+                                reader.GetInt32(2),
+                                reader.GetString(3),
+                                reader.GetInt32(4),
+                                reader.GetString(5),
+                                reader.GetInt32(6)
+                            ),
+                            reader.GetInt32(7)
+                        )
+                    );
+                    listOfStoreFrontLocation.Add(reader.GetString(8));
+                    tPrice += reader.GetInt32(4);
+
+                    listOfOrder.Add(
+                        new Order(
+                        shopId,
+                        listOfLineItems,
+                        listOfStoreFrontLocation,
+                        tPrice
+                    ));
+                    
+                    
+                }
+            } 
+
+            return listOfOrder;
+        }
+
+        public Product ProductIdToProduct(int prodId){
+            string sqlQuery = @"select * from Product p
+                            WHERE p.prodId = @productId";
+            Product prod = new Product();
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@productId", prodId);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    prod = new Product(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2), reader.GetString(3), reader.GetInt32(4)); 
+                }   
+            }
+            return prod;
+        }
+
+
+
     } 
         
+    public class SQLProductRepository : IProductRepository {
+        private readonly string _connectionStrings;
+        public SQLProductRepository(string p_connectionStrings)
+        {
+            _connectionStrings = p_connectionStrings;
+        }
+
+        public Product AddProduct(Product p_product)
+        {
+            //@ before the string will ignore special characters like \n
+            //This is where you specify the sql statement required to do whatever operation you need based on the method
+            //
+            string sqlQuery = @"insert into product 
+                            values(@prodName, @prodPrice, @prodDesc, @prodAgeRestriction)";
+
+            //using block is different from our normal using statement
+            //It is used to automatically close any resource you stated inside of the parenthesis
+            //If an exception occurs, it will still automatically close any resources
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                //Opens the connection to the database
+                con.Open();
+
+
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@prodName", p_product.Name);
+                command.Parameters.AddWithValue("@prodPrice", p_product.Price);
+                command.Parameters.AddWithValue("@prodDesc", p_product.Desc);
+                command.Parameters.AddWithValue("@prodAgeRestriction", p_product.Age_Restriction);
+ 
+                //Executes the SQL statement
+                command.ExecuteNonQuery();
+            }
+
+            // possibly adjust product id to match autogenerated id???
+
+            return p_product;
+        }
+
+        public List<Product> GetAllProducts(){
+            List<Product> listOfProducts = new List<Product>();
+
+            string sqlQuery = @"select * from Inventory 
+                                Inner Join Product p ON i.prodId = p.prodId";
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    listOfProducts.Add(new Product(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2), reader.GetString(3), reader.GetInt32(4))); 
+                }   
+            }
+            return listOfProducts;
+        }
+
+        public Product ProductIdToProduct(int prodId){
+            string sqlQuery = @"select * from Product p
+                            WHERE p.prodId = @productId";
+            Product prod = new Product();
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@productId", prodId);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    prod = new Product(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2), reader.GetString(3), reader.GetInt32(4)); 
+                }   
+            }
+            return prod;
+        }
+
+    } 
 
 }
