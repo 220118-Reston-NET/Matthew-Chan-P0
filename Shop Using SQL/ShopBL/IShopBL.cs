@@ -67,6 +67,18 @@ namespace ShopBL
         List<Order> GetACustomerOrder( int cId);
         List<Order> GetAShopOrder( int sId);    
 
+        bool checkOrder(int prodId, int quantity, Order orders, int sId);
+        bool CheckValidProduct(int sId, int pId);
+
+        ////////////////
+        public string ConvertSFIdToSFAddress(int sId);
+
+        Inventory GetSpecificInventory(int id);
+        
+
+        void printProductsInInventory(Inventory inv);
+        void printProductsInInventory(Inventory inv, Order ord);
+
     }
     
 }

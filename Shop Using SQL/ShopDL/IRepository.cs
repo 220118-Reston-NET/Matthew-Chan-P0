@@ -32,12 +32,14 @@ namespace ShopDL{
         Order AddOrder(Order o_order, int custId, int storeId);
         List<Order> GetAllOrder();
         Product ProductIdToProduct(int prodId);
-
         List<Order> GetACustomerOrder( int cId);    
-
         List<Order> GetAShopOrder( int sId);
 
+        string StoreFrontIdToAddress(int prodId);
 
+        
+
+        Inventory GetAnInventory(int s_storeId);
     }
 
     public interface IProductRepository{

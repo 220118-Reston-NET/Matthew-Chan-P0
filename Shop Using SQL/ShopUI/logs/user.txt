@@ -819,3 +819,298 @@
 2022-02-12 18:17:54.044 -08:00 [INF] Searching the inventory
 2022-02-12 18:27:05.782 -08:00 [INF] Displaying MainMenu to user
 2022-02-12 18:27:08.039 -08:00 [INF] Searching the inventory
+2022-02-12 22:35:15.094 -08:00 [INF] Displaying MainMenu to user
+2022-02-12 22:35:19.536 -08:00 [INF] Exiting application
+2022-02-13 13:47:35.632 -08:00 [INF] Placing an Order
+2022-02-13 13:47:38.911 -08:00 [INF] Placing an Order
+2022-02-13 13:47:40.252 -08:00 [INF] Placing an Order
+2022-02-13 13:48:46.638 -08:00 [INF] Placing an Order
+2022-02-13 13:52:11.405 -08:00 [INF] Placing an Order
+2022-02-13 13:52:12.354 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 13:52:12.938 -08:00 [INF] Exiting application
+2022-02-13 13:52:47.302 -08:00 [INF] Placing an Order
+2022-02-13 13:52:49.597 -08:00 [INF] Placing an Order
+2022-02-13 13:52:51.083 -08:00 [INF] Placing an Order
+2022-02-13 13:53:13.080 -08:00 [INF] Placing an Order
+2022-02-13 13:53:17.947 -08:00 [INF] Placing an Order
+2022-02-13 13:55:33.940 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 13:55:34.713 -08:00 [INF] Exiting application
+2022-02-13 13:55:49.124 -08:00 [INF] Placing an Order
+2022-02-13 13:55:51.267 -08:00 [INF] Placing an Order
+2022-02-13 13:55:53.193 -08:00 [INF] Placing an Order
+2022-02-13 13:56:09.579 -08:00 [INF] Placing an Order
+2022-02-13 13:56:18.458 -08:00 [INF] Placing an Order
+2022-02-13 13:56:20.011 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 13:57:04.217 -08:00 [INF] Exiting application
+2022-02-13 13:57:52.201 -08:00 [INF] Placing an Order
+2022-02-13 13:57:54.212 -08:00 [INF] Placing an Order
+2022-02-13 13:57:55.319 -08:00 [INF] Placing an Order
+2022-02-13 13:58:12.368 -08:00 [INF] Placing an Order
+2022-02-13 13:58:15.520 -08:00 [INF] Placing an Order
+2022-02-13 14:02:46.760 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 14:02:48.430 -08:00 [INF] Exiting application
+2022-02-13 14:03:05.008 -08:00 [INF] Placing an Order
+2022-02-13 14:03:07.272 -08:00 [INF] Placing an Order
+2022-02-13 14:03:08.421 -08:00 [INF] Placing an Order
+2022-02-13 14:03:23.090 -08:00 [INF] Placing an Order
+2022-02-13 14:03:25.325 -08:00 [INF] Placing an Order
+2022-02-13 14:03:51.398 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 14:03:54.526 -08:00 [INF] Exiting application
+2022-02-13 14:04:05.754 -08:00 [INF] Placing an Order
+2022-02-13 14:04:07.215 -08:00 [INF] Placing an Order
+2022-02-13 14:04:08.305 -08:00 [INF] Placing an Order
+2022-02-13 14:04:14.324 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 14:04:25.165 -08:00 [INF] Placing an Order
+2022-02-13 14:04:35.465 -08:00 [INF] Placing an Order
+2022-02-13 14:04:38.301 -08:00 [INF] Placing an Order
+2022-02-13 14:05:28.444 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 14:05:31.163 -08:00 [INF] Exiting application
+2022-02-13 14:05:42.309 -08:00 [INF] Placing an Order
+2022-02-13 14:05:44.183 -08:00 [INF] Placing an Order
+2022-02-13 14:05:44.932 -08:00 [INF] Placing an Order
+2022-02-13 14:05:53.939 -08:00 [INF] Placing an Order
+2022-02-13 14:07:17.508 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 14:07:18.564 -08:00 [INF] Exiting application
+2022-02-13 14:07:34.790 -08:00 [INF] Placing an Order
+2022-02-13 14:07:36.262 -08:00 [INF] Placing an Order
+2022-02-13 14:07:52.029 -08:00 [INF] Placing an Order
+2022-02-13 14:07:53.774 -08:00 [INF] Placing an Order
+2022-02-13 14:07:55.395 -08:00 [INF] Placing an Order
+2022-02-13 14:08:02.508 -08:00 [INF] Placing an Order
+2022-02-13 14:10:54.645 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 14:10:56.346 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 14:10:57.002 -08:00 [INF] Exiting application
+2022-02-13 14:11:08.286 -08:00 [INF] Placing an Order
+2022-02-13 14:11:09.861 -08:00 [INF] Placing an Order
+2022-02-13 14:11:10.953 -08:00 [INF] Placing an Order
+2022-02-13 14:11:18.114 -08:00 [INF] Placing an Order
+2022-02-13 14:12:07.081 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 14:12:08.385 -08:00 [INF] Exiting application
+2022-02-13 14:12:21.507 -08:00 [INF] Placing an Order
+2022-02-13 14:12:26.755 -08:00 [INF] Placing an Order
+2022-02-13 14:12:32.177 -08:00 [INF] Placing an Order
+2022-02-13 14:12:58.517 -08:00 [INF] Placing an Order
+2022-02-13 14:13:00.883 -08:00 [INF] Placing an Order
+2022-02-13 14:13:02.209 -08:00 [INF] Placing an Order
+2022-02-13 14:13:16.976 -08:00 [INF] Placing an Order
+2022-02-13 14:13:21.868 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 14:14:21.392 -08:00 [INF] Placing an Order
+2022-02-13 14:23:16.812 -08:00 [INF] Placing an Order
+2022-02-13 14:23:17.628 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 14:23:18.988 -08:00 [INF] Exiting application
+2022-02-13 14:23:33.685 -08:00 [INF] Placing an Order
+2022-02-13 14:23:38.548 -08:00 [INF] Placing an Order
+2022-02-13 14:23:41.228 -08:00 [INF] Placing an Order
+2022-02-13 14:23:42.684 -08:00 [INF] Placing an Order
+2022-02-13 14:25:25.884 -08:00 [INF] Placing an Order
+2022-02-13 14:25:26.522 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 14:25:27.843 -08:00 [INF] Exiting application
+2022-02-13 14:25:41.658 -08:00 [INF] Placing an Order
+2022-02-13 14:25:43.942 -08:00 [INF] Placing an Order
+2022-02-13 14:25:45.132 -08:00 [INF] Placing an Order
+2022-02-13 14:25:57.068 -08:00 [INF] Placing an Order
+2022-02-13 14:26:00.371 -08:00 [INF] Placing an Order
+2022-02-13 14:26:39.523 -08:00 [INF] Placing an Order
+2022-02-13 14:26:45.202 -08:00 [INF] Placing an Order
+2022-02-13 14:27:15.283 -08:00 [INF] Placing an Order
+2022-02-13 14:27:18.130 -08:00 [INF] Placing an Order
+2022-02-13 14:27:45.979 -08:00 [INF] Placing an Order
+2022-02-13 14:27:54.034 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 14:27:55.458 -08:00 [INF] Exiting application
+2022-02-13 14:28:32.268 -08:00 [INF] Placing an Order
+2022-02-13 14:28:35.397 -08:00 [INF] Placing an Order
+2022-02-13 14:28:38.362 -08:00 [INF] Placing an Order
+2022-02-13 14:29:59.458 -08:00 [INF] Placing an Order
+2022-02-13 15:37:21.597 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 15:37:23.045 -08:00 [INF] Exiting application
+2022-02-13 15:37:50.998 -08:00 [INF] Placing an Order
+2022-02-13 15:37:52.949 -08:00 [INF] Placing an Order
+2022-02-13 15:37:54.731 -08:00 [INF] Placing an Order
+2022-02-13 15:38:10.628 -08:00 [INF] Placing an Order
+2022-02-13 15:38:16.949 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 15:38:18.651 -08:00 [INF] Exiting application
+2022-02-13 15:55:03.443 -08:00 [INF] Placing an Order
+2022-02-13 15:55:06.326 -08:00 [INF] Placing an Order
+2022-02-13 15:55:07.444 -08:00 [INF] Placing an Order
+2022-02-13 15:55:12.035 -08:00 [INF] Placing an Order
+2022-02-13 15:55:31.572 -08:00 [INF] Placing an Order
+2022-02-13 15:55:36.565 -08:00 [INF] Placing an Order
+2022-02-13 15:55:38.243 -08:00 [INF] Placing an Order
+2022-02-13 15:55:43.283 -08:00 [INF] Placing an Order
+2022-02-13 15:59:47.014 -08:00 [INF] Placing an Order
+2022-02-13 15:59:49.284 -08:00 [INF] Placing an Order
+2022-02-13 15:59:50.273 -08:00 [INF] Placing an Order
+2022-02-13 16:01:26.110 -08:00 [INF] Placing an Order
+2022-02-13 16:01:27.636 -08:00 [INF] Placing an Order
+2022-02-13 16:01:28.698 -08:00 [INF] Placing an Order
+2022-02-13 16:09:12.951 -08:00 [INF] Placing an Order
+2022-02-13 16:09:15.376 -08:00 [INF] Placing an Order
+2022-02-13 16:09:16.118 -08:00 [INF] Placing an Order
+2022-02-13 16:09:43.682 -08:00 [INF] Placing an Order
+2022-02-13 16:36:08.914 -08:00 [INF] Placing an Order
+2022-02-13 16:36:10.833 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 16:36:11.282 -08:00 [INF] Exiting application
+2022-02-13 16:36:35.195 -08:00 [INF] Placing an Order
+2022-02-13 16:36:38.420 -08:00 [INF] Placing an Order
+2022-02-13 16:36:39.177 -08:00 [INF] Placing an Order
+2022-02-13 17:02:30.226 -08:00 [INF] Placing an Order
+2022-02-13 17:02:31.335 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 17:02:31.694 -08:00 [INF] Exiting application
+2022-02-13 19:00:28.956 -08:00 [INF] Placing an Order
+2022-02-13 19:00:35.730 -08:00 [INF] Placing an Order
+2022-02-13 19:00:40.833 -08:00 [INF] Placing an Order
+2022-02-13 19:11:21.086 -08:00 [INF] Placing an Order
+2022-02-13 19:13:31.763 -08:00 [INF] Placing an Order
+2022-02-13 19:13:34.168 -08:00 [INF] Placing an Order
+2022-02-13 19:13:34.861 -08:00 [INF] Placing an Order
+2022-02-13 19:14:07.235 -08:00 [INF] Placing an Order
+2022-02-13 19:14:12.653 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 19:14:16.781 -08:00 [INF] Searching the inventory
+2022-02-13 19:14:23.996 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 19:14:26.813 -08:00 [INF] Placing an Order
+2022-02-13 19:14:40.925 -08:00 [INF] Placing an Order
+2022-02-13 19:14:43.118 -08:00 [INF] Placing an Order
+2022-02-13 19:15:21.086 -08:00 [INF] Exiting application
+2022-02-13 19:15:32.017 -08:00 [INF] Placing an Order
+2022-02-13 19:15:34.233 -08:00 [INF] Placing an Order
+2022-02-13 19:15:40.046 -08:00 [INF] Placing an Order
+2022-02-13 19:16:19.652 -08:00 [INF] Placing an Order
+2022-02-13 20:14:25.799 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 20:14:28.791 -08:00 [INF] Placing an Order
+2022-02-13 20:14:45.231 -08:00 [INF] Placing an Order
+2022-02-13 20:15:42.383 -08:00 [INF] Placing an Order
+2022-02-13 20:15:48.950 -08:00 [INF] Placing an Order
+2022-02-13 20:17:40.711 -08:00 [INF] Placing an Order
+2022-02-13 20:17:43.943 -08:00 [INF] Placing an Order
+2022-02-13 20:17:44.789 -08:00 [INF] Placing an Order
+2022-02-13 20:18:19.889 -08:00 [INF] Placing an Order
+2022-02-13 20:18:23.713 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 20:18:25.613 -08:00 [INF] Placing an Order
+2022-02-13 20:18:31.205 -08:00 [INF] Placing an Order
+2022-02-13 20:22:55.969 -08:00 [INF] Placing an Order
+2022-02-13 20:23:00.055 -08:00 [INF] Placing an Order
+2022-02-13 20:32:00.964 -08:00 [INF] Placing an Order
+2022-02-13 20:32:03.747 -08:00 [INF] Placing an Order
+2022-02-13 20:32:05.352 -08:00 [INF] Placing an Order
+2022-02-13 20:33:00.033 -08:00 [INF] Placing an Order
+2022-02-13 20:33:02.032 -08:00 [INF] Placing an Order
+2022-02-13 20:33:03.126 -08:00 [INF] Placing an Order
+2022-02-13 20:33:07.964 -08:00 [INF] Placing an Order
+2022-02-13 20:33:34.439 -08:00 [INF] Placing an Order
+2022-02-13 20:33:35.790 -08:00 [INF] Placing an Order
+2022-02-13 20:33:39.614 -08:00 [INF] Placing an Order
+2022-02-13 20:34:39.942 -08:00 [INF] Placing an Order
+2022-02-13 20:34:40.950 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 20:34:41.510 -08:00 [INF] Exiting application
+2022-02-13 20:34:52.126 -08:00 [INF] Placing an Order
+2022-02-13 20:34:54.032 -08:00 [INF] Placing an Order
+2022-02-13 20:34:55.190 -08:00 [INF] Placing an Order
+2022-02-13 20:35:35.613 -08:00 [INF] Placing an Order
+2022-02-13 20:35:35.949 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 20:35:36.254 -08:00 [INF] Exiting application
+2022-02-13 20:35:48.480 -08:00 [INF] Placing an Order
+2022-02-13 20:35:51.143 -08:00 [INF] Placing an Order
+2022-02-13 20:35:52.101 -08:00 [INF] Placing an Order
+2022-02-13 20:36:29.864 -08:00 [INF] Placing an Order
+2022-02-13 20:36:44.846 -08:00 [INF] Placing an Order
+2022-02-13 20:36:50.482 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 20:36:56.660 -08:00 [INF] Placing an Order
+2022-02-13 20:38:31.445 -08:00 [INF] Placing an Order
+2022-02-13 20:38:33.039 -08:00 [INF] Placing an Order
+2022-02-13 20:38:33.948 -08:00 [INF] Placing an Order
+2022-02-13 20:38:51.699 -08:00 [INF] Placing an Order
+2022-02-13 20:39:07.661 -08:00 [INF] Placing an Order
+2022-02-13 20:39:08.604 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 20:39:09.099 -08:00 [INF] Exiting application
+2022-02-13 20:39:20.480 -08:00 [INF] Placing an Order
+2022-02-13 20:39:22.607 -08:00 [INF] Placing an Order
+2022-02-13 20:39:25.852 -08:00 [INF] Placing an Order
+2022-02-13 20:39:28.604 -08:00 [INF] Placing an Order
+2022-02-13 20:39:36.900 -08:00 [INF] Placing an Order
+2022-02-13 20:39:39.387 -08:00 [INF] Placing an Order
+2022-02-13 20:39:56.948 -08:00 [INF] Placing an Order
+2022-02-13 20:40:04.348 -08:00 [INF] Placing an Order
+2022-02-13 20:40:09.404 -08:00 [INF] Placing an Order
+2022-02-13 20:40:11.667 -08:00 [INF] Placing an Order
+2022-02-13 20:40:38.492 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 20:40:41.259 -08:00 [INF] Placing an Order
+2022-02-13 20:40:44.283 -08:00 [INF] Placing an Order
+2022-02-13 20:41:01.175 -08:00 [INF] Placing an Order
+2022-02-13 20:42:16.004 -08:00 [INF] Placing an Order
+2022-02-13 20:45:58.266 -08:00 [INF] Placing an Order
+2022-02-13 20:45:58.638 -08:00 [INF] Placing an Order
+2022-02-13 20:45:58.791 -08:00 [INF] Placing an Order
+2022-02-13 20:46:04.993 -08:00 [INF] Placing an Order
+2022-02-13 20:46:23.478 -08:00 [INF] Placing an Order
+2022-02-13 20:46:26.849 -08:00 [INF] Placing an Order
+2022-02-13 20:46:29.828 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 20:46:31.400 -08:00 [INF] Placing an Order
+2022-02-13 20:46:33.064 -08:00 [INF] Placing an Order
+2022-02-13 20:46:51.410 -08:00 [INF] Placing an Order
+2022-02-13 20:46:57.294 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 20:57:45.355 -08:00 [INF] Exiting application
+2022-02-13 20:58:06.150 -08:00 [INF] Placing an Order
+2022-02-13 20:58:10.039 -08:00 [INF] Placing an Order
+2022-02-13 20:58:12.091 -08:00 [INF] Placing an Order
+2022-02-13 20:58:14.675 -08:00 [INF] Placing an Order
+2022-02-13 20:58:32.868 -08:00 [INF] Placing an Order
+2022-02-13 20:58:38.579 -08:00 [INF] Placing an Order
+2022-02-13 20:58:41.018 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 20:58:42.179 -08:00 [INF] Placing an Order
+2022-02-13 20:59:20.666 -08:00 [INF] Placing an Order
+2022-02-13 20:59:29.970 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 21:01:00.542 -08:00 [INF] Exiting application
+2022-02-13 21:01:12.380 -08:00 [INF] Placing an Order
+2022-02-13 21:01:15.573 -08:00 [INF] Placing an Order
+2022-02-13 21:01:19.437 -08:00 [INF] Placing an Order
+2022-02-13 21:01:21.098 -08:00 [INF] Placing an Order
+2022-02-13 21:02:13.857 -08:00 [INF] Placing an Order
+2022-02-13 21:02:21.930 -08:00 [INF] Placing an Order
+2022-02-13 21:04:22.871 -08:00 [INF] Placing an Order
+2022-02-13 21:04:24.224 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 21:04:24.552 -08:00 [INF] Exiting application
+2022-02-13 21:04:35.576 -08:00 [INF] Placing an Order
+2022-02-13 21:04:37.634 -08:00 [INF] Placing an Order
+2022-02-13 21:04:39.936 -08:00 [INF] Placing an Order
+2022-02-13 21:04:43.008 -08:00 [INF] Placing an Order
+2022-02-13 21:08:26.390 -08:00 [INF] Placing an Order
+2022-02-13 21:08:30.146 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 21:08:32.070 -08:00 [INF] Placing an Order
+2022-02-13 21:08:58.056 -08:00 [INF] Placing an Order
+2022-02-13 21:17:56.054 -08:00 [INF] Placing an Order
+2022-02-13 21:18:00.506 -08:00 [INF] Placing an Order
+2022-02-13 21:18:09.793 -08:00 [INF] Placing an Order
+2022-02-13 21:18:21.651 -08:00 [INF] Placing an Order
+2022-02-13 21:18:22.506 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 21:18:23.787 -08:00 [INF] Exiting application
+2022-02-13 21:21:43.525 -08:00 [INF] Placing an Order
+2022-02-13 21:21:46.292 -08:00 [INF] Placing an Order
+2022-02-13 21:21:52.961 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 21:21:56.041 -08:00 [INF] Placing an Order
+2022-02-13 21:22:00.785 -08:00 [INF] Placing an Order
+2022-02-13 21:22:03.905 -08:00 [INF] Placing an Order
+2022-02-13 21:22:34.226 -08:00 [INF] Placing an Order
+2022-02-13 21:22:35.916 -08:00 [INF] Placing an Order
+2022-02-13 21:22:38.568 -08:00 [INF] Placing an Order
+2022-02-13 21:23:00.116 -08:00 [INF] Placing an Order
+2022-02-13 21:23:02.626 -08:00 [INF] Placing an Order
+2022-02-13 21:23:04.048 -08:00 [INF] Placing an Order
+2022-02-13 21:26:23.364 -08:00 [INF] Placing an Order
+2022-02-13 21:26:25.609 -08:00 [INF] Placing an Order
+2022-02-13 21:26:27.110 -08:00 [INF] Placing an Order
+2022-02-13 21:26:53.622 -08:00 [INF] Placing an Order
+2022-02-13 21:26:54.964 -08:00 [INF] Placing an Order
+2022-02-13 21:26:55.702 -08:00 [INF] Placing an Order
+2022-02-13 21:27:16.335 -08:00 [INF] Placing an Order
+2022-02-13 21:27:20.399 -08:00 [INF] Placing an Order
+2022-02-13 21:27:50.252 -08:00 [INF] Placing an Order
+2022-02-13 21:30:34.005 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 21:30:34.701 -08:00 [INF] Exiting application
+2022-02-13 21:30:52.905 -08:00 [INF] Placing an Order
+2022-02-13 21:30:54.192 -08:00 [INF] Placing an Order
+2022-02-13 21:30:55.916 -08:00 [INF] Placing an Order
+2022-02-13 21:31:11.028 -08:00 [INF] Placing an Order
+2022-02-13 21:33:37.834 -08:00 [INF] Placing an Order
+2022-02-13 21:33:44.750 -08:00 [INF] Placing an Order
+2022-02-13 21:33:45.571 -08:00 [INF] Placing an Order
+2022-02-13 21:34:37.748 -08:00 [INF] Placing an Order

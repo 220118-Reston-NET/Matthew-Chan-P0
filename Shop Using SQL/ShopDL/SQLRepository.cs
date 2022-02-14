@@ -442,18 +442,16 @@ namespace ShopDL
                             values(@prodId, @itemQuantity)";
             int numberOfItems = o_order.LineItems.Count;
 
-            using (SqlConnection con = new SqlConnection(_connectionStrings))
-            {
-                con.Open();
-                SqlCommand command = new SqlCommand(sqlQuery, con);
-
-                for(int i = 0; i < numberOfItems; i++){
-                    
+            for(int i = 0; i < numberOfItems; i++){
+                using (SqlConnection con = new SqlConnection(_connectionStrings))
+                {
+                    con.Open();
+                    SqlCommand command = new SqlCommand(sqlQuery, con);    
                     command.Parameters.AddWithValue("@prodId", o_order.LineItems[i].Products.prodId); //??????????????????
                     command.Parameters.AddWithValue("@itemQuantity", o_order.LineItems[i].Quantity);
-                }
-
-                command.ExecuteNonQuery();
+                    command.ExecuteNonQuery();
+                    Console.WriteLine("TEST");
+                }   
             }
 
 
@@ -479,26 +477,26 @@ namespace ShopDL
                 }
             }
             
-            
+            Console.WriteLine("TEST 2");
             
             
             sqlQuery = @"insert into Orders
                     values(@custId, @storeId)";
 
-            using (SqlConnection con = new SqlConnection(_connectionStrings))
-            {
-                con.Open();
-                SqlCommand command = new SqlCommand(sqlQuery, con);
-
-                for(int i = 0; i < numberOfItems; i++){
-                    
+            for(int i = 0; i < numberOfItems; i++){
+                using (SqlConnection con = new SqlConnection(_connectionStrings))
+                {
+                    con.Open();
+                    SqlCommand command = new SqlCommand(sqlQuery, con);
                     command.Parameters.AddWithValue("@custId", custId);
                     command.Parameters.AddWithValue("@storeId", storeId);
+                    command.ExecuteNonQuery();
                 }
 
-                command.ExecuteNonQuery();
+                
             }
 
+            Console.WriteLine("TEST 3");
             
             List<int> oId = new List<int>{};
             sqlQuery = @"SELECT top(@numOfOrders) * FROM Orders o ORDER BY o.orderId DESC";
@@ -521,24 +519,37 @@ namespace ShopDL
             }
 
 
-
+            Console.WriteLine("TEST 4");
 
             
             sqlQuery = @"insert into OrderToLineItem
                     values(@orderId, @lineItemId)";
 
-            using (SqlConnection con = new SqlConnection(_connectionStrings))
-            {
-                con.Open();
-                SqlCommand command = new SqlCommand(sqlQuery, con);
-                for(int i = 0; i < numberOfItems; i++){
+            for(int i = 0; i < numberOfItems; i++){
+                using (SqlConnection con = new SqlConnection(_connectionStrings))
+                {
+                    con.Open();
+                    SqlCommand command = new SqlCommand(sqlQuery, con);
+                
                     command.Parameters.AddWithValue("@orderId", oId[numberOfItems - i - 1]);
                     command.Parameters.AddWithValue("@lineItemId", IId[numberOfItems - i - 1]);
+                    command.ExecuteNonQuery();
                 }
 
-                command.ExecuteNonQuery();
+                
             }
+            Console.WriteLine("TEST 5");
+
+
+            // now take away from the inventory
+
+            for(int i = 0; i < numberOfItems; i++){
+                UseInventory(o_order.LineItems[i].Products.prodId, storeId, o_order.LineItems[i].Quantity);
+            }   
             
+            
+
+
             return o_order;
         } 
 
@@ -758,6 +769,111 @@ namespace ShopDL
             return prod;
         }
 
+        public Inventory GetAnInventory(int s_storeId)
+        {
+            Inventory inven = new Inventory();
+
+            string sqlQuery = @"select * from Inventory i
+                                Inner Join Product p ON i.prodId = p.prodId
+                                where i.storeId = @storeId"; 
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                //Opens connection to the database
+                con.Open();
+                //Create command object that has our sqlQuery and con object
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@storeId", s_storeId);
+                //SqlDataReader is a class specialized in reading outputs that came from a sql statement
+                //Usually this outputs are in a form of a table and keep that in mind
+                SqlDataReader reader = command.ExecuteReader();
+                //Read() methods checks if you have more rows to go through
+                //If there is another row = true, if not = false
+                
+                int sId = 0;
+                List<Product> productList = new List<Product>{};
+                List<int> productQuantity = new List<int>{};
+
+                while (reader.Read())
+                {
+                    productList.Add(new Product(reader.GetInt32(4), reader.GetString(5), reader.GetInt32(6), reader.GetString(7), reader.GetInt32(8)));
+                    productQuantity.Add(reader.GetInt32(2));
+                    sId = reader.GetInt32(3);
+                }
+                inven = new Inventory(productList,productQuantity, sId);
+            } 
+
+            return inven;
+        }
+
+        public string StoreFrontIdToAddress(int sId){
+            string sqlQuery = @"select sf.storeAddress from StoreFront sf
+                            WHERE sf.storeId = @storefrontId";
+            string storeFrontAddress = "N/A";
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@storefrontId", sId);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    storeFrontAddress = reader.GetString(0); 
+                }   
+            }
+            return storeFrontAddress;
+            
+        }
+
+
+
+        public Inventory UseInventory(int p_prodId, int s_storeId, int amount)
+        {
+            string sqlQuery = @"select prodQuantitiy from Inventory
+            WHERE inventory.storeId = @s_sId
+            AND inventory.prodId = @p_ProdId";
+
+            int currentInv = 0;
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                con.Open();
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@s_sId", s_storeId);
+                command.Parameters.AddWithValue("@p_ProdId", p_prodId);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    currentInv = reader.GetInt32(0); 
+                }
+                
+            } 
+
+
+
+            sqlQuery = @"UPDATE Inventory
+            SET prodQuantitiy = @currentInv - @amnt
+            WHERE inventory.storeId = @s_sId
+            AND inventory.prodId = @p_ProdId"; 
+            
+            using (SqlConnection con = new SqlConnection(_connectionStrings))
+            {
+                //Opens connection to the database
+                con.Open();
+                //Create command object that has our sqlQuery and con object
+                SqlCommand command = new SqlCommand(sqlQuery, con);
+                command.Parameters.AddWithValue("@amnt", amount);
+                command.Parameters.AddWithValue("@s_sId", s_storeId);
+                command.Parameters.AddWithValue("@p_ProdId", p_prodId);
+                command.Parameters.AddWithValue("@currentInv", currentInv);
+                //SqlDataReader is a class specialized in reading outputs that came from a sql statement
+                //Usually this outputs are in a form of a table and keep that in mind
+                SqlDataReader reader = command.ExecuteReader();
+                //Read() methods checks if you have more rows to go through
+                //If there is another row = true, if not = false
+                
+            } 
+            Inventory inven = GetAnInventory(s_storeId);
+            return inven;
+        }
 
 
     } 

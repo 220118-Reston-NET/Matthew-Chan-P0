@@ -42,6 +42,10 @@ namespace ShopUI
 
             _storeBL.printProductsInInventory(storeInventory);            
             
+            if(storeInventory.Products.Any() == false ){
+                Console.WriteLine("The store is empty.");
+            }
+
             Console.WriteLine("Done");
             Console.ReadLine();
             

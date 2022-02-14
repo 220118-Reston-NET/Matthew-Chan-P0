@@ -10,10 +10,10 @@ public class Product{
 
     public Product(){
         prodId = 0;
-        Name = "Candy Bar";
-        Price = 1;
-        Desc = "Yummy fot the tummy";
-        Age_Restriction = 4;
+        Name = "Nothing";
+        Price = 0;
+        Desc = "DNE";
+        Age_Restriction = 0;
     }
     
     public Product(string productName, int productPrice){
