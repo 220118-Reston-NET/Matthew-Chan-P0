@@ -25,6 +25,8 @@ namespace ShopDL{
 
         List<Product> GetAllProducts();
 
+            
+
 
         
     }
@@ -40,6 +42,9 @@ namespace ShopDL{
         
 
         Inventory GetAnInventory(int s_storeId);
+
+        List<Customer> GetAllCustomer();
+        List<Product> GetAllProducts();
     }
 
     public interface IProductRepository{

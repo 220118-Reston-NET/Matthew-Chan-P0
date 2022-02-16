@@ -1114,3 +1114,178 @@
 2022-02-13 21:33:44.750 -08:00 [INF] Placing an Order
 2022-02-13 21:33:45.571 -08:00 [INF] Placing an Order
 2022-02-13 21:34:37.748 -08:00 [INF] Placing an Order
+2022-02-13 21:34:52.172 -08:00 [INF] Placing an Order
+2022-02-13 21:34:53.502 -08:00 [INF] Placing an Order
+2022-02-13 21:34:54.380 -08:00 [INF] Placing an Order
+2022-02-13 21:35:16.048 -08:00 [INF] Placing an Order
+2022-02-13 21:35:33.335 -08:00 [INF] Placing an Order
+2022-02-13 21:56:57.882 -08:00 [INF] Displaying MainMenu to user
+2022-02-13 21:56:59.130 -08:00 [INF] Exiting application
+2022-02-14 08:33:48.501 -08:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-14 08:34:01.892 -08:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-14 08:34:02.860 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 08:35:25.503 -08:00 [INF] Searching the inventory
+2022-02-14 08:35:33.011 -08:00 [INF] Searching the inventory
+2022-02-14 08:35:39.123 -08:00 [INF] Searching the inventory
+2022-02-14 08:39:31.601 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 08:39:34.193 -08:00 [INF] Searching the inventory
+2022-02-14 08:39:51.738 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 08:39:53.858 -08:00 [INF] Replenishing the Inventory
+2022-02-14 08:45:23.087 -08:00 [INF] Replenishing the Inventory
+2022-02-14 08:56:07.041 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 08:56:10.689 -08:00 [INF] Replenishing the Inventory
+2022-02-14 08:56:14.624 -08:00 [INF] Replenishing the Inventory
+2022-02-14 09:14:04.123 -08:00 [INF] Replenishing the Inventory
+2022-02-14 09:14:07.641 -08:00 [INF] Replenishing the Inventory
+2022-02-14 09:14:10.952 -08:00 [INF] Replenishing the Inventory
+2022-02-14 09:18:55.837 -08:00 [INF] Replenishing the Inventory
+2022-02-14 09:19:00.473 -08:00 [INF] Replenishing the Inventory
+2022-02-14 09:19:01.653 -08:00 [INF] Replenishing the Inventory
+2022-02-14 09:19:04.413 -08:00 [INF] Replenishing the Inventory
+2022-02-14 09:27:06.323 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 09:27:07.875 -08:00 [INF] Placing an Order
+2022-02-14 09:27:15.451 -08:00 [INF] Placing an Order
+2022-02-14 09:27:18.457 -08:00 [INF] Placing an Order
+2022-02-14 09:27:42.921 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 09:27:46.737 -08:00 [INF] Adding stores
+2022-02-14 09:27:54.426 -08:00 [INF] Adding stores
+2022-02-14 09:27:59.481 -08:00 [INF] Adding stores
+2022-02-14 09:28:00.337 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 09:28:01.970 -08:00 [INF] Searching the inventory
+2022-02-14 09:31:23.297 -08:00 [INF] Searching the inventory
+2022-02-14 09:31:29.112 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 09:31:30.225 -08:00 [INF] Exiting application
+2022-02-14 09:34:57.167 -08:00 [INF] Searching the inventory
+2022-02-14 09:44:37.835 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 09:44:38.845 -08:00 [INF] Placing an Order
+2022-02-14 09:44:40.649 -08:00 [INF] Placing an Order
+2022-02-14 09:44:41.354 -08:00 [INF] Placing an Order
+2022-02-14 10:07:13.775 -08:00 [INF] Placing an Order
+2022-02-14 10:07:20.975 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 10:07:22.175 -08:00 [INF] Exiting application
+2022-02-14 11:54:18.552 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 11:54:21.836 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 11:54:30.037 -08:00 [INF] Replenishing the Inventory
+2022-02-14 11:59:15.747 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 11:59:16.508 -08:00 [INF] Exiting application
+2022-02-14 12:04:25.435 -08:00 [INF] Placing an Order
+2022-02-14 12:04:27.944 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 12:04:30.624 -08:00 [INF] Replenishing the Inventory
+2022-02-14 12:04:32.155 -08:00 [INF] Replenishing the Inventory
+2022-02-14 12:04:44.480 -08:00 [INF] Replenishing the Inventory
+2022-02-14 12:04:56.743 -08:00 [INF] Replenishing the Inventory
+2022-02-14 12:05:00.386 -08:00 [INF] Replenishing the Inventory
+2022-02-14 12:05:05.694 -08:00 [INF] Replenishing the Inventory
+2022-02-14 12:05:42.785 -08:00 [INF] Replenishing the Inventory
+2022-02-14 12:05:47.439 -08:00 [INF] Replenishing the Inventory
+2022-02-14 12:05:49.383 -08:00 [INF] Replenishing the Inventory
+2022-02-14 12:05:51.051 -08:00 [INF] Replenishing the Inventory
+2022-02-14 12:05:51.647 -08:00 [INF] Replenishing the Inventory
+2022-02-14 12:05:52.177 -08:00 [INF] Replenishing the Inventory
+2022-02-14 12:05:52.675 -08:00 [INF] Replenishing the Inventory
+2022-02-14 12:05:53.170 -08:00 [INF] Replenishing the Inventory
+2022-02-14 12:05:53.681 -08:00 [INF] Replenishing the Inventory
+2022-02-14 12:05:54.241 -08:00 [INF] Replenishing the Inventory
+2022-02-14 12:05:55.146 -08:00 [INF] Replenishing the Inventory
+2022-02-14 12:10:50.862 -08:00 [INF] Replenishing the Inventory
+2022-02-14 12:21:24.964 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 12:21:25.858 -08:00 [INF] Exiting application
+2022-02-14 12:28:58.262 -08:00 [INF] Placing an Order
+2022-02-14 12:29:03.270 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 12:29:05.629 -08:00 [INF] Replenishing the Inventory
+2022-02-14 12:29:14.156 -08:00 [INF] Replenishing the Inventory
+2022-02-14 12:59:26.248 -08:00 [INF] Replenishing the Inventory
+2022-02-14 14:40:33.699 -08:00 [INF] Replenishing the Inventory
+2022-02-14 14:40:35.021 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 16:12:33.187 -08:00 [INF] Replenishing the Inventory
+2022-02-14 16:32:35.047 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 16:32:35.315 -08:00 [INF] Exiting application
+2022-02-14 16:37:34.971 -08:00 [INF] Adding stores
+2022-02-14 16:37:44.845 -08:00 [INF] Adding stores
+2022-02-14 16:37:52.981 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 16:38:02.868 -08:00 [INF] Adding stores
+2022-02-14 16:38:07.101 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 16:38:08.517 -08:00 [INF] Adding stores
+2022-02-14 16:38:14.725 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 16:39:02.221 -08:00 [INF] Replenishing the Inventory
+2022-02-14 16:39:06.716 -08:00 [INF] Replenishing the Inventory
+2022-02-14 16:39:10.398 -08:00 [INF] Replenishing the Inventory
+2022-02-14 16:39:13.188 -08:00 [INF] Replenishing the Inventory
+2022-02-14 16:39:16.980 -08:00 [INF] Replenishing the Inventory
+2022-02-14 17:44:43.959 -08:00 [INF] Replenishing the Inventory
+2022-02-14 17:44:44.336 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 17:44:44.605 -08:00 [INF] Exiting application
+2022-02-14 17:58:22.351 -08:00 [INF] Replenishing the Inventory
+2022-02-14 17:58:27.023 -08:00 [INF] Replenishing the Inventory
+2022-02-14 17:58:33.998 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:00:12.118 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 18:00:20.478 -08:00 [INF] Exiting application
+2022-02-14 18:00:34.455 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:00:38.021 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:00:41.885 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:00:54.429 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:02:09.445 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 18:02:35.221 -08:00 [INF] Exiting application
+2022-02-14 18:03:39.535 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:03:45.316 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:03:49.020 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:04:11.381 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 18:04:14.020 -08:00 [INF] Exiting application
+2022-02-14 18:06:23.493 -08:00 [INF] Exiting application
+2022-02-14 18:06:35.215 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:06:40.415 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:06:43.451 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:06:47.733 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:06:51.859 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:06:54.593 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:07:30.771 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 18:07:31.826 -08:00 [INF] Exiting application
+2022-02-14 18:07:40.712 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:08:03.387 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:08:04.682 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 18:08:07.410 -08:00 [INF] Exiting application
+2022-02-14 18:10:25.662 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:10:30.093 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:10:33.558 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:10:49.824 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:10:54.113 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:26:49.332 -08:00 [INF] Replenishing the Inventory
+2022-02-14 18:26:52.378 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 18:26:53.330 -08:00 [INF] Exiting application
+2022-02-14 18:32:56.058 -08:00 [INF] Placing an Order
+2022-02-14 18:32:59.152 -08:00 [INF] Placing an Order
+2022-02-14 18:32:59.966 -08:00 [INF] Placing an Order
+2022-02-14 18:33:04.446 -08:00 [INF] Placing an Order
+2022-02-14 18:38:03.520 -08:00 [INF] Placing an Order
+2022-02-14 18:38:06.931 -08:00 [INF] Placing an Order
+2022-02-14 18:38:10.188 -08:00 [INF] Placing an Order
+2022-02-14 18:43:31.660 -08:00 [INF] Placing an Order
+2022-02-14 18:43:34.636 -08:00 [INF] Placing an Order
+2022-02-14 18:43:36.849 -08:00 [INF] Placing an Order
+2022-02-14 18:44:05.096 -08:00 [INF] Placing an Order
+2022-02-14 18:44:20.153 -08:00 [INF] Placing an Order
+2022-02-14 18:44:22.529 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 18:44:25.713 -08:00 [INF] Exiting application
+2022-02-14 18:44:38.177 -08:00 [INF] Placing an Order
+2022-02-14 18:44:42.739 -08:00 [INF] Placing an Order
+2022-02-14 18:44:44.577 -08:00 [INF] Placing an Order
+2022-02-14 18:44:48.648 -08:00 [INF] Placing an Order
+2022-02-14 20:11:08.798 -08:00 [INF] Placing an Order
+2022-02-14 20:37:50.230 -08:00 [INF] Placing an Order
+2022-02-14 20:38:03.722 -08:00 [INF] Placing an Order
+2022-02-14 20:38:09.531 -08:00 [INF] Placing an Order
+2022-02-14 20:44:58.081 -08:00 [INF] Displaying MainMenu to user
+2022-02-14 20:55:54.268 -08:00 [INF] Exiting application
+2022-02-15 13:06:21.734 -08:00 [INF] Replenishing the Inventory
+2022-02-15 13:06:29.872 -08:00 [INF] Replenishing the Inventory
+2022-02-15 13:06:38.770 -08:00 [INF] Replenishing the Inventory
+2022-02-15 13:22:03.025 -08:00 [INF] Replenishing the Inventory
+2022-02-15 13:38:10.078 -08:00 [INF] Displaying MainMenu to user
+2022-02-15 13:51:17.539 -08:00 [INF] Displaying MainMenu to user
+2022-02-15 13:51:19.033 -08:00 [INF] Displaying MainMenu to user
+2022-02-15 20:23:31.788 -08:00 [INF] Displaying MainMenu to user
+2022-02-15 20:23:34.484 -08:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 20:23:39.812 -08:00 [INF] Displaying MainMenu to user
+2022-02-15 20:23:44.468 -08:00 [INF] Displaying MainMenu to user
+2022-02-15 20:23:45.195 -08:00 [INF] Displaying SearchCustomer Menu to user
+2022-02-15 22:11:14.953 -08:00 [INF] Displaying SearchCustomer Menu to user

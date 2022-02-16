@@ -61,6 +61,8 @@ namespace ShopBL{
             return false;
         }
 
+        
+        
 
         public bool checkOrder(int prodId, int quantity, Order Orders, int sId ){
             // add the quantity of the list of orders and quantity
@@ -122,19 +124,10 @@ namespace ShopBL{
         public void printProductsInInventory(Inventory inv, Order ord){
             List<int> filler = new List<int>{};
             for(int i = 0; i < inv.Products.Count; i++){
-                bool created = false;
+                filler.Add(0);
                 for(int j = 0; j < ord.LineItems.Count; j++){
-                    
                     if(ord.LineItems[j].Products.prodId == inv.Products[i].prodId){
-                        if(created == false){
-                            filler.Add(ord.LineItems[j].Quantity);
-                            created = true;
-                        }
-                        else
-                        {
-                            
-                            filler[i] += ord.LineItems[j].Quantity;
-                        }
+                        filler[i] += ord.LineItems[j].Quantity;
                     }
                 }
             }
@@ -143,5 +136,25 @@ namespace ShopBL{
                 Console.WriteLine(inv.Products[i].prodId + " " + inv.Products[i].Name + ": " + inv.quantity[i] + " - " + filler[i]);
             }
         }
+        public bool CheckValidAge(int custId,int prodId){
+            List<Customer> cust = _repo.GetAllCustomer();
+            List<Product> listOfProducts = _repo.GetAllProducts();
+            int reqAge = 0;
+            for(int i = 0; i < listOfProducts.Count;i++){
+                if(listOfProducts[i].prodId == prodId){
+                    reqAge = listOfProducts[i].Age_Restriction;
+                    break;
+                }
+            }
+            for(int i = 0; i < cust.Count; i++){
+                if(cust[i].custId == custId && cust[i].Age > reqAge){
+                    return true;
+                }
+            }
+            return false;
+        }
+        
+
+
     } 
 }

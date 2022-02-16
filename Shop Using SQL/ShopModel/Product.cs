@@ -3,13 +3,32 @@ public class Product{
     
     public int prodId {get; set; }
     public string Name { get; set; }
-    public int Price { get; set; }
+    public int Price { 
+        get{return Price;} 
+        set{
+            if(value > 0){
+                Price = value;
+            }
+            else{
+                throw new Exception("The price cannot be lower than 0!");
+            }
+        } 
+    }
     public string Desc { get; set; }
-    public int Age_Restriction { get; set; }
-    
+    public int Age_Restriction { 
+        get{return Age_Restriction;} 
+        set{
+            if(value > 0){
+                Age_Restriction = value;
+            }
+            else{
+                throw new Exception("The Age Restriction cannot be lower than 0!");
+            }
+        }
+    }
 
     public Product(){
-        prodId = 0;
+        prodId = -1;
         Name = "Nothing";
         Price = 0;
         Desc = "DNE";
@@ -17,7 +36,7 @@ public class Product{
     }
     
     public Product(string productName, int productPrice){
-        prodId = 0;
+        prodId = -1;
         Name = productName;
         Price = productPrice;
         Desc = "";

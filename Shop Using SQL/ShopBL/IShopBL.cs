@@ -31,9 +31,14 @@ namespace ShopBL
         List<StoreFront> GetAllStoreFronts();
         List<StoreFront> SearchStoreFrontProducts(string s_product);
 
+        void DisplayAllStoreFronts();
+
+
         List<Product> GetAllProducts();
         Inventory GetSpecificInventory(int id);
         //List<Product> GetProductsFromShopId(int id);
+        bool CheckValidStoreId(int storeId);
+
         List<StoreFront> checkStoresForAProduct(int prodId);
 
         void printProductsInInventory(Inventory inv);
@@ -43,6 +48,10 @@ namespace ShopBL
         Inventory AddItemToInventory(int p_prodId, int s_storeId, int amount);
 
         bool CheckIfEmpty(List<StoreFront> listOfCust);
+
+
+        void DisplayAllProducts();
+        
     }
 
     /* public interface IInventoryBL{
@@ -78,6 +87,8 @@ namespace ShopBL
 
         void printProductsInInventory(Inventory inv);
         void printProductsInInventory(Inventory inv, Order ord);
+
+        bool CheckValidAge(int custId, int prodId);
 
     }
     

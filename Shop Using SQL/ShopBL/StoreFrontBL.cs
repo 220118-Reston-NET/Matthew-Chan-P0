@@ -45,13 +45,43 @@ namespace ShopBL{
         public List<StoreFront> SearchStoreFrontProducts(string s_product){
             List<StoreFront> listOfStoreFronts = _repo.GetAllStoreFront();
             // LINQ library
+            List<StoreFront> listOfStoreFrontWithProduct = new List<StoreFront>{};
 
+            for(int i = 0; i < listOfStoreFronts.Count; i++){
+                for(int j = 0; j < listOfStoreFronts[i].Inv.Products.Count; j++){
+                    if(listOfStoreFronts[i].Inv.Products[j].Name == s_product ){
+                        listOfStoreFrontWithProduct.Add(listOfStoreFronts[i]);
+                    }
+                }
+            }
             
-            return listOfStoreFronts;
+            
+            return listOfStoreFrontWithProduct;
                         //.Where(store => store.Inv.Products.Contains(s_product))
                         //.ToList()); 
         }
+
+
+        public void DisplayAllStoreFronts(){
+            List<StoreFront> listOfStoreFronts = _repo.GetAllStoreFront();
+            for(int i = 0; i < listOfStoreFronts.Count; i++){
+                Console.WriteLine(listOfStoreFronts[i].storeId + ") " + listOfStoreFronts[i].Name);
+            }
+        }
+
         
+        public bool CheckValidStoreId(int storeId){
+            List<StoreFront> listOfStoreFronts = _repo.GetAllStoreFront();
+            for(int i = 0; i < listOfStoreFronts.Count;i++){
+                Console.WriteLine("comapring with ID: " + listOfStoreFronts[i].storeId);
+                if(listOfStoreFronts[i].storeId == storeId){
+                    return true;
+                }
+                
+            }
+            return false; // or should i throw an error?????????
+        }
+
         public List<StoreFront> checkStoresForAProduct(int pId){
             List<StoreFront> listOfStoreFronts = _repo.GetAllStoreFront();
             List<StoreFront> listOfStoreFrontsWithProduct = new List<StoreFront>{};
@@ -99,6 +129,31 @@ namespace ShopBL{
         /*public List<Product> GetProductsFromShopId (int sId) {
             List<Products> = _
         }*/
+
+
+
+        public void DisplayAllProducts (){
+            List<Product> listOfProducts = _repo.GetAllProducts();
+            for(int i = 0; i < listOfProducts.Count; i++){
+                Console.WriteLine(listOfProducts[i].prodId + ") " + listOfProducts[i].Name);
+            }
+        }
+
+
+        public bool CheckValidProductId(int prodId){
+            List<Product> listOfProducts = _repo.GetAllProducts();
+            for(int i = 0; i < listOfProducts.Count;i++){
+                if(listOfProducts[i].prodId == prodId){
+                    return true;
+                }
+                
+            }
+            return false; // or should i throw an error?????????
+        }
         
+
+
+        
+
     }
 }

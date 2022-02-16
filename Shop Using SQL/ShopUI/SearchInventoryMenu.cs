@@ -15,10 +15,7 @@ namespace ShopUI
         public void Display()
         {
             Console.WriteLine("Here are all the shops:");
-            List<StoreFront> listOfStoreFronts = _storeBL.GetAllStoreFronts();
-            for(int i = 0; i < listOfStoreFronts.Count; i++){
-                Console.WriteLine(listOfStoreFronts[i].Name);
-            }
+            _storeBL.DisplayAllStoreFronts();
             Console.WriteLine("Please select the shop(by name)");
         }
 

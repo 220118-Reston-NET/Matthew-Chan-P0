@@ -51,9 +51,27 @@ namespace ShopUI
                     }
                     return "MainMenu";
                 case "2":
-                    Console.WriteLine("Please enter a phone number!");
-                    _newCust.PhoneNumber = Console.ReadLine();
-                    return "AddCustomer";
+                    try{
+
+                        Console.WriteLine("Please enter a phone number in \"XXX-XXX-XXXX\" format: ");
+                        _newCust.PhoneNumber = Console.ReadLine();
+
+                        while(_newCust.PhoneNumber.Length != 12){
+                            Console.WriteLine("That was not in the correct format");
+                            Console.WriteLine("Please enter a phone number in \"XXX-XXX-XXXX\" format: ");
+                            _newCust.PhoneNumber = Console.ReadLine();
+                        }
+                        
+                        Console.WriteLine("Phone number added");
+                        Console.ReadLine();
+
+                        return "AddCustomer";
+                    }
+                    catch(FormatException)
+                    {
+                        Console.WriteLine("Error, wrong format. Returning you back to customer menu");
+                        return "AddCustomer";
+                    }
                 case "3":
                     Console.WriteLine("Please enter an email!");
                     _newCust.Email = Console.ReadLine();
@@ -63,21 +81,27 @@ namespace ShopUI
                     _newCust.Address = Console.ReadLine();
                     return "AddCustomer";
                 case "5":
-                    Console.WriteLine("Please enter a Age!");
-                    _newCust.Age = Convert.ToInt32(Console.ReadLine());
+                    try{
+                        Console.WriteLine("Please enter a Age!");
+                        int submittedAge = Convert.ToInt32(Console.ReadLine());
+                        if(submittedAge > 0 && submittedAge < 130)
+                        {
+                            _newCust.Age = submittedAge;
+                        }
+                        else{
+                            Console.WriteLine("Invalid Age. Returning to Customer menu");
+                            Console.ReadLine();
+                        }
+                    }
+                    catch{
+                        Console.WriteLine("Please input a valid response.\n Returning to customer menu.");
+                        Console.ReadLine();
+                    }
                     return "AddCustomer";
                 case "6":
                     Console.WriteLine("Please enter a name!");
                     _newCust.Name = Console.ReadLine();
                     return "AddCustomer";
-                /*case "4":
-                    Console.WriteLine("Please enter the amount of items you would like to order: ");
-                    int numOfItems = Convert.ToInt32(Console.ReadLine());
-                    for(int i = 0; i < numOfItems; i++){
-                        Console.WriteLine("Item " + i + ": ");
-                        List<CustomerModel>.Add(new CustomerModel )
-                    }
-                    return "AddOrder" */
                 default:
                     Console.WriteLine("Please input a valid response");
                     Console.WriteLine("Please press Enter to continue");

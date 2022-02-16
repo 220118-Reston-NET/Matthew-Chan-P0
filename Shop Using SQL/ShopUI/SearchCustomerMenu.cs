@@ -42,7 +42,7 @@ namespace ShopUI
                     }
                     foreach(var item in listOfCustomer){
                         Console.WriteLine("=========");
-                        Console.WriteLine(item);
+                        Console.WriteLine(item.Name);
                     }
 
                     Console.WriteLine("Please press Enter to Continue");

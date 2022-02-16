@@ -69,27 +69,38 @@ namespace ShopUI
                     
                     return "MainMenu";                
                 case "2":
-                    Console.WriteLine("Number of items you would like to order!");
+                    Console.WriteLine("How many items would you like to order!");
                     int amount = Convert.ToInt32(Console.ReadLine());
                     for(int i = 0; i < amount; i++){
                         // need to have something that is able to retrieve a product from name/id
                         Inventory storeInventory = _orderBL.GetSpecificInventory(storeId); // need to make this
                         int prodId;
                         do{
-                            if(Orders.LineItems.Any()){
-                                _orderBL.printProductsInInventory(storeInventory, Orders);
+                            try{
+                                if(Orders.LineItems.Any()){
+                                    _orderBL.printProductsInInventory(storeInventory, Orders);
+                                }
+                                else
+                                {
+                                    _orderBL.printProductsInInventory(storeInventory);
+                                }
+                                Console.WriteLine("What product would you like to order?");
+                                prodId = Convert.ToInt32(Console.ReadLine());
+                                if(!_orderBL.CheckValidProduct(storeId,prodId)){
+                                    Console.WriteLine("invalid product. please try again");
+                                }
+                                if(!_orderBL.CheckValidAge(custId, prodId)){
+                                    Console.WriteLine("Customer is too young to buy this product. please try again");
+                                }
                             }
-                            else
-                            {
-                                _orderBL.printProductsInInventory(storeInventory);
-                            }
-                            Console.WriteLine("What product would you like to order?");
-                            prodId = Convert.ToInt32(Console.ReadLine());
-                            if(!_orderBL.CheckValidProduct(storeId,prodId)){
-                                Console.WriteLine("invalid product. please try again");
+                            catch(FormatException){
+                                Console.WriteLine("Please input a valid ID.");
+                                Console.WriteLine("Please press enter to continue.");
+                                Console.ReadLine();
+                                return "PlaceOrder";
                             }
                         }
-                        while(!_orderBL.CheckValidProduct(storeId,prodId));
+                        while(!_orderBL.CheckValidProduct(storeId,prodId) && !_orderBL.CheckValidAge(custId, prodId));
 
                         
                         Product prod = _orderBL.ProductIdToProduct(prodId);
@@ -97,37 +108,59 @@ namespace ShopUI
                         // need to have a check to make sure customer is not able to go over
                         while(true)
                         {
-                            Console.WriteLine("How many of the products would you like?");
-                            quantity = Convert.ToInt32(Console.ReadLine());
-                            if(_orderBL.checkOrder(prodId,quantity, Orders, storeId) == true){ // checkOrder will make sure product does not go over
-                                if(quantity != 0)
-                                {
-                                    Orders.AddItemToOrder(new LineItem(prod, quantity), _orderBL.ConvertSFIdToSFAddress(storeId)); // makde COnvertSFIdToSFAddress
-                                    numOfOrders++;
-                                    costOfOrder += prod.Price * quantity;
+                            try{
+                                Console.WriteLine("How many of the products would you like?");
+                                quantity = Convert.ToInt32(Console.ReadLine());
+                                if(_orderBL.checkOrder(prodId,quantity, Orders, storeId) == true){ // checkOrder will make sure product does not go over
+                                    if(quantity != 0)
+                                    {
+                                        Orders.AddItemToOrder(new LineItem(prod, quantity), _orderBL.ConvertSFIdToSFAddress(storeId)); // makde COnvertSFIdToSFAddress
+                                        numOfOrders++;
+                                        costOfOrder += prod.Price * quantity;
+                                    }
+                                    else{
+                                        Console.WriteLine("Item was not added because quantity was 0");
+                                    }
+                                    break;
                                 }
                                 else{
-                                    Console.WriteLine("Item was not added because quantity was 0");
+                                    Console.WriteLine("order exceeds inventory. please try again");
                                 }
-                                break;
                             }
-                            else{
-                                Console.WriteLine("order exceeds inventory. please try again");
+                            catch(FormatException){
+                                Console.WriteLine("Please input a valid quantity");
+                                Console.WriteLine("Please press enter to continue.");
+                                Console.ReadLine();
+                                return "PlaceOrder";
                             }
                         }
                     }
                     
                     return "PlaceOrder";
                 case "3":   
-                    Console.WriteLine("Please enter the Store ID!");
-                    storeId = Convert.ToInt32(Console.ReadLine());
-                    return "PlaceOrder";
-                    
+                    try {
+                        Console.WriteLine("Please enter the Store ID!");
+                        storeId = Convert.ToInt32(Console.ReadLine());
+                        return "PlaceOrder";
+                    }
+                    catch(FormatException){
+                        Console.WriteLine("Error: Invalid Id");
+                        Console.WriteLine("Please press enter to continue.");
+                        Console.ReadLine();
+                        return "PlaceOrder";
+                    }
                 case "4":
-                    Console.WriteLine("Please enter the Customer ID!");
-                    custId = Convert.ToInt32(Console.ReadLine());
-                    return "PlaceOrder";
-
+                    try{
+                        Console.WriteLine("Please enter the Customer ID!");
+                        custId = Convert.ToInt32(Console.ReadLine());
+                        return "PlaceOrder";
+                    }
+                    catch(FormatException){
+                        Console.WriteLine("Error: Invalid Id");
+                        Console.WriteLine("Please press enter to continue.");
+                        Console.ReadLine();
+                        return "PlaceOrder";
+                    }
                 case "5":
                     if(!Orders.LineItems.Any()){
                         Console.WriteLine("No orders");
@@ -162,7 +195,7 @@ namespace ShopUI
                     Console.WriteLine("END\n Press enter to Continue");
                     Console.ReadLine();
                     return "PlaceOrder";
-                case "7": // not implimented yet
+                case "7": 
                     List<Order> shopOrder = _orderBL.GetAShopOrder( storeId);
                     if(!shopOrder.Any()){
                         Console.WriteLine("No orders");
@@ -172,10 +205,10 @@ namespace ShopUI
                     Console.WriteLine("These are the orders from the customer");
                     foreach(Order o in shopOrder){
                         Console.WriteLine("=============================");
-                        Console.WriteLine("Order number: " + o.orderNumber);
                         for(int i = 0; i < o.LineItems.Count; i ++){
                             Console.WriteLine(o.LineItems[i].Products.Name + ": " + o.LineItems[i].Quantity );
                         }
+                        break;
                     }
                     Console.WriteLine("END\n Press enter to Continue");
                     Console.ReadLine();
